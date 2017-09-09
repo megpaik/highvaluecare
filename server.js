@@ -9,23 +9,23 @@ var app     = express();
 var scrapePrice = function(hostName, url) {
   app.get('/scrape', function(req, res){
     request(url, function(error, response, html){
-      if(!error){
+      if (!error) {
         var $ = cheerio.load(html);
         var title, release, rating;
         var json = {};
 
         switch (hostName) {
           case "HCBB":
-          HCBBreq(url, json).bind(this);
+          HCBBreq(json);
           break;
           case "CH":
-          CHreq(url, json).bind(this);
+          CHreq(json);
           break;
           case "FH":
-          FHreq(url, json).bind(this);
+          FHreq(json);
           break;
           case "NCH":
-          NCHreq(url, json).bind(this);
+          NCHreq(json);
         }
       }
       // write the File, replace later
@@ -37,7 +37,7 @@ var scrapePrice = function(hostName, url) {
 }
 
 // HealthCareBlueBook helper (specific to their HTML)
-var HCBBreq = function(url, json) {
+var HCBBreq = function(json) {
   var price = -1;
   // get els with matching tag, and run a function on them?
   $('.arrow-box').forEach(function(){
@@ -47,8 +47,8 @@ var HCBBreq = function(url, json) {
   json.price = price;
 }
 
-// HealthCareBlueBook helper (specific to their HTML)
-var CHreq = function(url, json) {
+// ClearHealth helper (specific to their HTML)
+var CHreq = function(json) {
   var prices = [];
   $('.price-badge price-charged').forEach(function(){
     var data = $(this);
@@ -60,7 +60,7 @@ var CHreq = function(url, json) {
 
 
 // FairHealth helper (specific to their HTML)
-var FHreq = function(url, json) {
+var FHreq = function(json) {
   price = 0;
   $('.circle out-net-summary').forEach(function(){
     var data = $(this);
@@ -69,12 +69,13 @@ var FHreq = function(url, json) {
   json.price = price;
 }
 
-// newchoicehealth scrape
-var NCHreq = function(url, json) {
+// NewChoiceHealth helper (specific to their HTML)
+var NCHreq = function(json) {
   price = 0;
   $('.pull-left cost average').forEach(function(){
     var data = $(this);
-    price = data.text();
+    text = data.text();
+    text = parseInt(text.replace('$', '').replace(',','').replace(' ',''));
   })
   json.price = price;
 }
