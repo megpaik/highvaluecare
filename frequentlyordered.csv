@@ -1,0 +1,141 @@
+Chest Xray,d
+KUB,obstruction
+Knee Xray,?
+Mammography,breast cancer
+Ct Head,cancer
+Ct Head,
+Ct Head,stroke
+Ct Chest,pulmonary embolism
+MRI Brain,stroke
+complete blood count,
+basic metabolic panel,
+magnesium,
+phosphorus,
+hemoglobin a1c,
+lipid panel,
+creatinine kinase,
+AST,
+ALT,
+alkaline phosphatase,
+thyroid stimulating hromone,
+t4,
+blood urea nitrogen,
+creatinine kinase,
+iron,
+ferritin,
+folate,
+vitamin b12,
+prothombin time,
+partial thromboplastin time,
+protein c,
+protein s,
+d dimer,pulmonary embolism
+c reactive protein,lupus
+erythrocyte sedimentation rate,lupus
+amylase,pancreatitis
+lipase,pancreatitis
+hiv elisa,HIV
+hep b surface antigen,Hepatitis B
+vdrl,Syphilis
+rpr,Syphilis
+cea,Colon Ca
+hfe gene mutation,Hemochromatosis
+acetaminophen level,
+alcohol level,
+alpha tocopherol,?
+ana,lupus
+anca,anca vasculitis
+barium enema,
+barium swallow,
+bilirubin,
+blood cultures,sepsis
+bnp,heart failure
+calcium,
+fecal calprotectin,
+ctni,MI
+ckmb,MI
+cbc with manual diff,
+cbc with autodiff,
+ceruloplasmin,Wilsons Disease
+cmv antigen,CMV Viremia?
+cdiff (different assays),Cdiff Colitis
+colonoscopy,Colon Ca
+c3,
+c4,
+cortisol,
+cryptosporidium,
+ct abdomen,
+ct angiogram abdomen,
+ct enterography,
+echocardiogram,
+ekg,
+elastase,
+endomysial iga antibody,
+esr,
+stress test (various types),
+ferritin,
+anti gliadin,
+hepatitis panel,
+hep a,
+hep b sag,
+hep b sab,
+hep b cab,
+hep c ab,
+iron,
+tibc,
+ferritin,
+fecal fat,
+stool o and p,
+flow cytomtery,
+lactate,
+ldh,
+urine microalbumin,
+urine protein,
+urine creatinine,
+urine sodium,
+urine urea,
+ipth,
+pthrp,
+25 vit d,
+1/25 vit d,
+plasma metanephrines,pheo
+ppd,
+retic count,
+RF,
+Ruq us,
+stool cx,
+stool electorlytes,
+stool wbc,
+thyroglobulin antibody,
+tpo antibody,
+ttg iga and igg,
+transferrin,
+tsh,
+uds,
+b12,
+folate,
+mma,
+other one,
+vit k,
+vitamin a,
+serum vip level,
+whipple serology,
+procalcitonin,sepsis
+anti pla2r,
+BK,
+Erythropoetin level,
+TMP2/IGFBP7,
+Renal Ultrasound,
+Non Contrast CT in AKI,
+Schistocytes on Smear,
+DSA,
+RTEC,
+Granular Casts,
+Hyaline Casts,
+urine eosinophils,
+urine protein/creatinine,
+24 hr urine protein,
+beta hydroxybutyrate,DKA
+urine ketones,DKA
+PD cell ct,peritonitis
+PD culture,peritonitis
