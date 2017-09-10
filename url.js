@@ -1,18 +1,19 @@
-var Browser = require("zombie");
-var assert = require("assert");
+var express = require('express');
+var fs = require('fs');
+var request = require('request');
+var cheerio = require('cheerio');
+var app     = express();
 
-browser = new Browser()
-browser.visit("https://www.fairhealthconsumer.org/estimate-costs/step-1", function () {
-    browser.choose(#radio1);
-    browser.clickLink(.step1Btn);
-    browser.fill(#location, "07046");
-    browser.clickLink(.step2Btn);
-    browser.fill(#care-code, "84445\n");
-    console.log(browser.location());
-    // wait for new page to be loaded then fire callback function
-    browser.wait().then(function() {
+function hc(str){
+    var HCBB = "https://healthcarebluebook.com/page_SearchResults.aspx?SearchTerms=" + str + "&tab=ShopForCare";
+    var link = ""; //PARSE HTML HERE (div class = 'service-name')
 
-        // just dump some debug data to see if we're on the right page
-        console.log(browser.dump());
-    })
-});
+
+
+    return "https://healthcarebluebook.com/page_ProcedureDetails" + link.subString(11)
+}
+
+function chc(str){
+    var CH = "https://clearhealthcosts.com/search/?query=" + str + "+X-ray+exam+upper+gi+tract&zip_code=19019&radius=25&no_zero=1&submit="
+    return CH;
+}

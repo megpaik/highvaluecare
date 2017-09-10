@@ -35,7 +35,7 @@
 80169,,18.84,25.46,0.00,18.84,Drug screen quant everolimus
 80170,,22.47,30.37,0.00,22.47,Assay of gentamicin
 80171,,18.18,24.57,0.00,18.18,Drug screen quant gabapentin
-"",,19.98,27.00,0.00,19.98,Assay of haloperidol
+80173,,19.98,27.00,0.00,19.98,Assay of haloperidol
 80175,,18.18,24.57,0.00,18.18,Drug screen quan lamotrigine
 80176,,20.15,27.23,0.00,20.15,Assay of lidocaine
 80177,,18.18,24.57,0.00,18.18,Drug scrn quan levetiracetam
@@ -78,7 +78,7 @@
 80424,,0.00,0.00,0.00,69.27,Glucagon tolerance panel
 80426,,0.00,0.00,0.00,203.58,Gonadotropin hormone panel
 80428,,0.00,0.00,0.00,91.50,Growth hormone panel
-"",,0.00,0.00,0.00,185.32,Insulin suppression panel
+80432,,0.00,0.00,0.00,185.32,Insulin suppression panel
 80434,,0.00,0.00,0.00,138.78,Insulin tolerance panel
 80435,,0.00,0.00,0.00,141.31,Insulin tolerance panel
 80436,,0.00,0.00,0.00,95.79,Metyrapone panel
@@ -121,7 +121,7 @@
 81246,,83.62,83.62,0.00,83.62,Flt3 gene analysis
 81256,,89.66,89.66,0.00,89.66,Hfe gene
 81261,,271.59,271.59,0.00,271.59,Igh gene rearrange amp meth
-"",,404.00,404.00,0.00,404.00,Igh vari regional mutation
+81263,,404.00,404.00,0.00,404.00,Igh vari regional mutation
 81264,,204.83,204.83,0.00,204.83,Igk rearrangeabn clonal pop
 81265,,294.99,294.99,0.00,294.99,Str markers specimen anal
 81267,,284.58,284.58,0.00,284.58,Chimerism anal no cell selec
@@ -164,7 +164,7 @@
 81370,,551.61,551.61,0.00,551.61,Hla i & ii typing lr
 81371,,330.17,330.17,0.00,330.17,Hla i & ii type verify lr
 81372,,303.02,303.02,0.00,303.02,Hla i typing complete lr
-"",,99.79,99.79,0.00,99.79,Hla i typing 1 antigen lr
+81374,,99.79,99.79,0.00,99.79,Hla i typing 1 antigen lr
 81375,,302.80,302.80,0.00,302.80,Hla ii typing ag equiv lr
 81376,,167.66,167.66,0.00,167.66,Hla ii typing 1 locus lr
 81377,,125.94,125.94,0.00,125.94,Hla ii type 1 ag equiv lr
@@ -207,7 +207,7 @@
 81470,,0.00,0.00,0.00,0.00,X-linked intellectual dblt
 81471,,0.00,0.00,0.00,0.00,X-linked intellectual dblt
 81490,,590.61,590.61,0.00,590.61,Autoimmune rheumatoid arthr
-"",,3443.36,3443.36,0.00,3443.36,Oncology breast mrna
+81519,,3443.36,3443.36,0.00,3443.36,Oncology breast mrna
 81525,,3125.73,3125.73,0.00,3125.73,Oncology colon mrna
 81528,,512.43,512.43,0.00,505.28,Oncology colorectal scr
 81535,,583.52,788.54,0.00,583.52,Oncology gynecologic
@@ -250,7 +250,7 @@
 82131,,23.14,31.27,0.00,23.14,Amino acids single quant
 82135,,22.57,30.50,0.00,22.57,Assay aminolevulinic acid
 82136,,23.14,31.27,0.00,23.14,Amino acids quant 2-5
-"",,19.99,27.02,0.00,19.99,Assay of ammonia
+82140,,19.99,27.02,0.00,19.99,Assay of ammonia
 82143,,9.42,12.73,0.00,7.89,Amniotic fluid scan
 82150,,8.89,12.01,0.00,8.89,Assay of amylase
 82150,QW,8.89,12.01,0.00,8.89,Assay of amylase
@@ -293,7 +293,7 @@
 82370,,17.18,23.22,0.00,17.18,X-ray assay calculus
 82373,,24.77,33.47,0.00,24.77,Assay c-d transfer measure
 82374,,6.70,9.06,0.00,6.70,Assay blood carbon dioxide
-"",,16.90,22.84,0.00,7.16,Assay carboxyhb quant
+82375,,16.90,22.84,0.00,7.16,Assay carboxyhb quant
 82376,,8.22,11.11,0.00,5.65,Assay carboxyhb qual
 82378,,26.01,35.16,0.00,26.01,Carcinoembryonic antigen
 82379,,23.14,31.27,0.00,23.14,Assay of carnitine
@@ -336,7 +336,7 @@
 82570,QW,7.10,9.60,0.00,7.10,Assay of urine creatinine
 82575,,12.97,17.53,0.00,12.97,Creatinine clearance test
 82585,,11.77,15.91,0.00,11.77,Assay of cryofibrinogen
-"",,26.61,35.96,0.00,26.61,Assay of cyanide
+82600,,26.61,35.96,0.00,26.61,Assay of cyanide
 82607,,20.68,27.94,0.00,20.68,Vitamin B-12
 82608,,19.64,26.54,0.00,19.64,B-12 binding capacity
 82610,,18.65,25.20,0.00,18.65,Cystatin c
@@ -379,7 +379,7 @@
 82784,,12.76,17.24,0.00,12.76,Assay iga/igd/igg/igm each
 82785,,22.58,30.52,0.00,22.58,Assay of ige
 82787,,11.00,14.87,0.00,11.00,Igg 1 2 3 or 4 each
-"",,26.54,35.87,0.00,26.54,Blood gases any combination
+82803,,26.54,35.87,0.00,26.54,Blood gases any combination
 82805,,38.92,52.60,0.00,38.92,Blood gases w/o2 saturation
 82810,,11.97,16.18,0.00,11.97,Blood gases o2 sat only
 82820,,13.70,18.52,0.00,13.70,Hemoglobin-oxygen affinity
@@ -422,7 +422,7 @@
 83014,,10.78,14.57,0.00,10.78,H pylori drug admin
 83015,,25.83,34.90,0.00,13.80,Heavy metal screen
 83018,,30.13,40.71,0.00,30.13,Quantitative screen metals
-"",,24.77,33.47,0.00,24.77,Hemoglobin chromotography
+83021,,24.77,33.47,0.00,24.77,Hemoglobin chromotography
 83026,,3.24,4.38,0.00,3.24,Hemoglobin copper sulfate
 83030,,11.34,15.33,0.00,11.34,Fetal hemoglobin chemical
 83033,,8.18,11.05,0.00,7.92,Fetal hemoglobin assay qual
@@ -465,7 +465,7 @@
 83586,,17.56,23.73,0.00,17.56,Assay 17- ketosteroids
 83593,,36.08,48.75,0.00,31.70,Fractionation ketosteroids
 83605,,14.65,19.80,0.00,14.65,Assay of lactic acid
-"",,8.28,11.19,0.00,8.28,Lactate (LD) (LDH) enzyme
+83613,,8.28,11.19,0.00,8.28,Lactate (LD) (LDH) enzyme
 83625,,17.55,23.72,0.00,17.55,Assay of ldh enzymes
 83630,,26.93,36.39,0.00,26.93,Lactoferrin fecal (qual)
 83631,,26.93,36.39,0.00,26.93,Lactoferrin fecal (quant)
@@ -508,7 +508,7 @@
 83880,QW,46.56,62.92,0.00,46.56,Assay of natriuretic peptide
 83883,,18.65,25.20,0.00,18.65,Assay nephelometry not spec
 83885,,33.62,45.43,0.00,27.94,Assay of nickel
-"",,27.59,37.28,0.00,27.59,Oligoclonal bands
+83916,,27.59,37.28,0.00,27.59,Oligoclonal bands
 83918,,22.57,30.50,0.00,22.57,Organic acids total quant
 83919,,22.57,30.50,0.00,22.57,Organic acids qual each
 83921,,22.57,30.50,0.00,22.57,Organic acid single quant
@@ -551,7 +551,7 @@
 84135,,26.25,35.47,0.00,26.25,Assay of pregnanediol
 84138,,25.97,35.09,0.00,24.76,Assay of pregnanetriol
 84140,,28.36,38.33,0.00,28.36,Assay of pregnenolone
-"",,28.62,38.67,0.00,28.62,Assay of progesterone
+84144,,28.62,38.67,0.00,28.62,Assay of progesterone
 84145,,36.75,49.66,0.00,36.75,Procalcitonin (pct)
 84146,,26.58,35.93,0.00,26.58,Assay of prolactin
 84150,,34.23,46.26,0.00,25.53,Assay of prostaglandin
@@ -594,7 +594,7 @@
 84305,,29.17,39.42,0.00,26.95,Assay of somatomedin
 84307,,25.07,33.89,0.00,25.07,Assay of somatostatin
 84311,,9.59,12.96,0.00,9.59,Spectrophotometry
-"",,26.90,36.35,0.00,26.90,Chromatogram assay sugars
+84375,,26.90,36.35,0.00,26.90,Chromatogram assay sugars
 84376,,7.54,10.19,0.00,7.54,Sugars single qual
 84377,,7.54,10.19,0.00,7.54,Sugars multiple qual
 84378,,15.81,21.37,0.00,15.81,Sugars single quant
@@ -637,7 +637,7 @@
 84520,QW,5.42,7.32,0.00,5.42,Assay of urea nitrogen
 84525,,5.17,6.98,0.00,3.95,Urea nitrogen semi-quant
 84540,,6.51,8.80,0.00,6.51,Assay of urine/urea-n
-"",,6.20,8.38,0.00,6.20,Assay of blood/uric acid
+84550,,6.20,8.38,0.00,6.20,Assay of blood/uric acid
 84550,QW,6.20,8.38,0.00,6.20,Assay of blood/uric acid
 84560,,6.51,8.80,0.00,4.73,Assay of urine/uric acid
 84577,,17.12,23.13,0.00,17.12,Assay of feces/urobilinogen
@@ -680,7 +680,7 @@
 85049,,6.14,8.30,0.00,6.14,Automated platelet count
 85055,,36.73,49.64,0.00,36.73,Reticulated platelet assay
 85130,,16.31,22.04,0.00,16.31,Chromogenic substrate assay
-"",,6.25,8.44,0.00,6.25,Blood clot lysis time
+85175,,6.25,8.44,0.00,6.25,Blood clot lysis time
 85210,,17.81,24.07,0.00,7.92,Clot factor ii prothrom spec
 85220,,24.21,32.71,0.00,24.21,Blooc clot factor v test
 85230,,24.56,33.19,0.00,24.56,Clot factor vii proconvertin
@@ -723,7 +723,7 @@
 85400,,12.14,16.40,0.00,12.14,Fibrinolytic plasmin
 85410,,10.57,14.29,0.00,10.57,Fibrinolytic antiplasmin
 85415,,23.58,31.87,0.00,19.93,Fibrinolytic plasminogen
-"",,13.97,18.88,0.00,13.97,Fibrinolytic plasminogen
+85421,,13.97,18.88,0.00,13.97,Fibrinolytic plasminogen
 85441,,5.76,7.79,0.00,5.76,Heinz bodies direct
 85445,,9.35,12.64,0.00,7.92,Heinz bodies induced
 85460,,10.61,14.34,0.00,10.61,Hemoglobin fetal
@@ -766,7 +766,7 @@
 86023,,17.09,23.09,0.00,17.09,Immunoglobulin assay
 86038,,16.58,22.41,0.00,16.58,Antinuclear antibodies
 86039,,15.31,20.69,0.00,15.31,Antinuclear antibodies (ANA)
-"",,7.91,10.69,0.00,7.91,Antistreptolysin o screen
+86063,,7.91,10.69,0.00,7.91,Antistreptolysin o screen
 86140,,7.10,9.60,0.00,7.10,C-reactive protein
 86141,,17.76,24.00,0.00,17.76,C-reactive protein hs
 86146,,34.91,47.17,0.00,34.91,Beta-2 glycoprotein antibody
@@ -809,7 +809,7 @@
 86325,,30.68,41.46,0.00,30.68,Other immunoelectrophoresis
 86327,,31.12,42.06,0.00,31.12,Immunoelectrophoresis assay
 86329,,19.27,26.04,0.00,19.27,Immunodiffusion nes
-"",,33.43,45.17,0.00,33.43,Immune complex assay
+86332,,33.43,45.17,0.00,33.43,Immune complex assay
 86334,,30.65,41.42,0.00,30.65,Immunofix e-phoresis serum
 86335,,40.26,54.40,0.00,40.26,Immunfix e-phorsis/urine/csf
 86336,,21.38,21.38,0.00,18.54,Inhibin A
@@ -852,7 +852,7 @@
 86617,,21.25,28.72,0.00,21.25,Lyme disease antibody
 86618,,23.36,31.57,0.00,23.36,Lyme disease antibody
 86618,QW,23.36,31.57,0.00,23.36,Lyme disease antibody
-"",,12.25,16.56,0.00,11.22,Brucella antibody
+86622,,12.25,16.56,0.00,11.22,Brucella antibody
 86625,,18.00,24.32,0.00,18.00,Campylobacter antibody
 86628,,16.47,22.26,0.00,16.47,Candida antibody
 86631,,16.22,21.92,0.00,11.98,Chlamydia antibody
@@ -895,7 +895,7 @@
 86706,,14.73,19.91,0.00,14.73,Hep b surface antibody
 86707,,15.87,21.45,0.00,15.87,Hepatitis be antibody
 86708,,16.99,22.96,0.00,16.99,Hepatitis a total antibody
-"",,18.59,25.13,0.00,18.59,Influenza virus antibody
+86710,,18.59,25.13,0.00,18.59,Influenza virus antibody
 86711,,19.74,26.68,0.00,19.74,John cunningham antibody
 86713,,20.99,28.37,0.00,20.99,Legionella antibody
 86717,,16.80,22.71,0.00,16.80,Leishmania antibody
@@ -938,7 +938,7 @@
 86807,,54.29,73.36,0.00,54.29,Cytotoxic antibody screening
 86808,,40.71,55.01,0.00,40.71,Cytotoxic antibody screening
 86812,,35.40,47.84,0.00,35.40,Hla typing a b or c
-"",,38.21,51.64,0.00,38.21,Hla typing dr/dq
+86816,,38.21,51.64,0.00,38.21,Hla typing dr/dq
 86817,,88.32,119.35,0.00,88.32,Hla typing dr/dq
 86821,,77.45,104.66,0.00,77.45,Lymphocyte culture mixed
 86822,,50.15,67.77,0.00,50.15,Lymphocyte culture primed
@@ -981,7 +981,7 @@
 87086,,11.07,14.97,0.00,11.07,Urine culture/colony count
 87088,,11.10,15.00,0.00,11.10,Urine bacteria culture
 87101,,10.57,14.29,0.00,10.57,Skin fungi culture
-"",,12.37,16.72,0.00,12.37,Blood fungus culture
+87103,,12.37,16.72,0.00,12.37,Blood fungus culture
 87106,,14.16,19.14,0.00,14.16,Fungi identification yeast
 87107,,14.16,19.14,0.00,14.16,Fungi identification mold
 87109,,21.11,28.53,0.00,21.11,Mycoplasma
@@ -1024,7 +1024,7 @@
 87253,,27.71,37.45,0.00,27.71,Virus inoculate tissue addl
 87254,,26.83,36.26,0.00,26.83,Virus inoculation shell via
 87255,,46.45,62.77,0.00,46.45,Genet virus isolate hsv
-"",,16.44,22.22,0.00,15.09,Pertussis ag if
+87265,,16.44,22.22,0.00,15.09,Pertussis ag if
 87267,,16.44,22.22,0.00,15.09,Enterovirus antibody dfa
 87269,,16.44,22.22,0.00,15.09,Giardia ag if
 87270,,16.44,22.22,0.00,15.09,Chlamydia trachomatis ag if
@@ -1067,7 +1067,7 @@
 87389,QW,33.03,44.64,0.00,33.03,Hiv-1 ag w/hiv-1 & hiv-2 ab
 87390,,24.20,32.70,0.00,24.20,Hiv-1 ag eia
 87391,,24.20,32.70,0.00,24.20,Hiv-2 ag eia
-"",,16.44,22.22,0.00,15.09,Resp syncytial ag eia
+87420,,16.44,22.22,0.00,15.09,Resp syncytial ag eia
 87425,,16.44,22.22,0.00,15.09,Rotavirus ag eia
 87427,,16.44,22.22,0.00,15.09,Shiga-like toxin ag eia
 87430,,16.44,22.22,0.00,15.09,Strep a ag eia
@@ -1110,7 +1110,7 @@
 87515,,27.51,37.18,0.00,27.51,Hepatitis b dna dir probe
 87516,,48.14,65.06,0.00,48.14,Hepatitis b dna amp probe
 87517,,58.76,79.40,0.00,58.76,Hepatitis b dna quant
-"",,48.14,65.06,0.00,48.14,Hepatitis c probe&rvrs trnsc
+87521,,48.14,65.06,0.00,48.14,Hepatitis c probe&rvrs trnsc
 87522,,58.76,79.40,0.00,58.76,Hepatitis c revrs trnscrpj
 87525,,27.51,37.18,0.00,27.51,Hepatitis g dna dir probe
 87526,,48.14,65.06,0.00,48.14,Hepatitis g dna amp probe
@@ -1153,7 +1153,7 @@
 87632,,292.77,395.64,0.00,292.77,Resp virus 6-11 targets
 87633,,571.72,772.60,0.00,571.72,Resp virus 12-25 targets
 87640,,48.14,65.06,0.00,48.14,Staph a dna amp probe
-"",,27.51,37.18,0.00,27.51,Strep a dna dir probe
+87650,,27.51,37.18,0.00,27.51,Strep a dna dir probe
 87650,QW,27.51,37.18,0.00,27.51,Strep a dna dir probe
 87651,,48.14,65.06,0.00,48.14,Strep a dna amp probe
 87651,QW,48.14,65.06,0.00,48.14,Strep a dna amp probe
@@ -1196,7 +1196,7 @@
 87912,,353.15,477.23,0.00,353.15,Genotype dna hepatitis b
 88130,,20.65,27.90,0.00,20.65,Sex chromatin identification
 88140,,10.96,14.81,0.00,10.96,Sex chromatin identification
-"",,27.79,27.79,14.49,27.79,Cytopath c/v thin layer redo
+88153,,27.79,27.79,14.49,27.79,Cytopath c/v thin layer redo
 88147,,15.61,15.61,14.49,15.61,Cytopath c/v automated
 88148,,20.84,20.84,14.49,18.71,Cytopath c/v auto rescreen
 88150,,14.49,9.60,14.49,14.49,Cytopath c/v manual
@@ -1239,7 +1239,7 @@
 88372,,31.20,42.16,0.00,31.20,Protein analysis w/probe
 88720,,6.88,9.30,0.00,6.88,Bilirubin total transcut
 88738,,6.88,9.30,0.00,6.88,Hgb quant transcutaneous
-"",,6.88,9.30,0.00,6.88,Transcutaneous methb
+88741,,6.88,9.30,0.00,6.88,Transcutaneous methb
 89050,,6.48,8.76,0.00,6.48,Body fluid cell count
 89051,,7.55,10.20,0.00,7.55,Body fluid cell count
 89055,,5.86,7.92,0.00,5.86,Leukocyte assessment fecal
@@ -1282,7 +1282,7 @@ G0123,,27.79,27.79,14.49,27.79,Screen cerv/vag thin layer
 G0143,,27.79,27.79,14.49,27.79,"Scr c/v cyto,thinlayer,rescr"
 G0144,,29.31,29.31,14.49,29.31,"Scr c/v cyto,thinlayer,rescr"
 G0145,,36.34,36.34,14.49,36.28,"Scr c/v cyto,thinlayer,rescr"
-"",,20.84,20.84,14.49,18.71,"Scr c/v cyto, autosys, rescr"
+G0148,,20.84,20.84,14.49,18.71,"Scr c/v cyto, autosys, rescr"
 G0306,,10.66,14.41,0.00,10.66,CBC/diffwbc w/o platelet
 G0307,,8.87,11.99,0.00,8.87,CBC without platelet
 G0328,,21.82,29.48,0.00,21.82,Fecal blood scrn immunoassay
