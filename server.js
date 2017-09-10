@@ -3,10 +3,18 @@ var fs      = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
 var app     = express();
+let test = require('./test.js');
+var path    = require("path");
+
+var bodyParser = require('body-parser');
 
 var costs = {}
 var preHCBBurls = []
+app.use(express.static(__dirname));
 
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 /* ---------------------------------------------- */
 /*                  HELPER FUNCTIONS              */
 /* ---------------------------------------------- */
@@ -170,8 +178,14 @@ app.get('/scrape', (req, res) => {
   id2Costs(ids)
 
   // finally, we'll just send out a message to the browser
-  res.send('Check your console!')
+  res.sendFile(path.join(__dirname+'/mainpage.html'));
 });
+
+// app.get('/data', (req, res) => {
+  
+//     // finally, we'll just send out a message to the browser
+//     res.send('test');
+//   });
 
 app.listen('8081');
 console.log('The magic happens on port 8081');

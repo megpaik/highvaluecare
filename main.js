@@ -4,6 +4,7 @@ document.title = "Penn Medicine Searcher";
 var macro = [];
 // make lower case data available for search
 var sorted = [];
+var result = [];
 // list of current items that are have already processed
 var currItems = [];
 var tableheadings = ['CPT', 'Intended Diagnosis', 'Sensitivity', 'Specificity', 'PPV', 'NPV', 'Cost'];
@@ -18,12 +19,36 @@ Papa.parse("https://raw.githubusercontent.com/megpaik/pennapps/master/studies.cs
         // now sort the array
         sorted = sort(macro);
         // now capitalize the array
-        var result = capitalize(sorted);
+        result = capitalize(sorted);
+	}
+});
+
+Papa.parse("https://raw.githubusercontent.com/megpaik/pennapps/master/lab-fees.csv", {
+    download: true,
+    skipEmptyLines: true,    
+	complete: function(results) {
+        // this is raw data
+        var rawPrices = results.data;
+        console.log(result[0][7]);
+        console.log(rawPrices[0][3]);
+        for (var i = 0; i < rawPrices.length; i++) {
+            for (var j = 0; j < result.length; j++) {
+                if (result[j][1] === rawPrices[i][0]) {
+                    result[j][7] = rawPrices[i][3];
+                } else if (result[j][7] === "") {
+                    result[j][7] = "N/A";
+                }
+            }
+        }
+        listfill();
+    }
+});
+
+var listfill = function() {
         for (var i = 1; i < result.length; i++) {
             addStudy('#toplist', result[i]);                
         }
-	}
-});
+}
 
 // sorting algorithm for 2D array based on the first column
 // results in a lower case array
@@ -113,6 +138,17 @@ var addStudy = function(node, arr) {
         $(miniBox).slideToggle("fast", function() {});
     });
 }
+
+
+// dummy.addEventListener("click", function() {
+//         var xhr = new XMLHttpRequest();
+//         xhr.open( "GET", '/data', true);
+//         var res = xhr.response;
+//         // request.setRequestHeader("Content-Type", "object");
+//        console.log(typeof res);
+//        console.log(res.value);
+//     });
+
 
 var searchEvent = function(keyword) {
     for (var i = 0; i < sorted.length; i++) {
