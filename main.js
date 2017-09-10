@@ -154,7 +154,7 @@ var searchEvent = function(keyword) {
     for (var i = 0; i < sorted.length; i++) {
         $('#resulthead').text('Results for: "' + keyword + '"');        
         var target = sorted[i][0];
-        var targetDiag = sorted[i][1];
+        var targetDiag = sorted[i][2];
         if (target.indexOf(keyword) >= 0 || targetDiag.indexOf(keyword) >= 0) {
             addStudy('#resultlist', sorted[i]);
         }
