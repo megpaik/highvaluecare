@@ -4,7 +4,8 @@ var request = require('request');
 var cheerio = require('cheerio');
 var app     = express();
 
-var costs = {};
+var costs = {}
+var preHCBBurls = []
 
 /* ---------------------------------------------- */
 /*                  HELPER FUNCTIONS              */
@@ -27,7 +28,7 @@ var prescrape = function(url, hostName, studyName) {
 var scrape = function(url, hostName, studyName) {
   var promise = prescrape(url, hostName, studyName)
   .then((fulfilVal) => { loadAndDelegate(fulfilVal.html, fulfilVal.hostName, fulfilVal.studyName) })
-  .catch(error => console.log(error));
+  //.catch(error => console.log(error));
   return promise;
 }
 
@@ -36,17 +37,21 @@ var loadAndDelegate = function(html, hostName, studyName) {
   var $ = cheerio.load(html);
   switch (hostName) {
     case "HCBB":
-    HCBBreq($, studyName);
+    costs[studyName] = HCBBreq($, studyName);
     break;
     case "CH":
-    CHreq($, studyName);
+    costs[studyName] = CHreq($, studyName);
     break;
     case "FH":
-    FHreq($, studyName);
+    costs[studyName] = FHreq($, studyName);
     break;
     case "NCH":
-    NCHreq($, studyName);
+    costs[studyName] = NCHreq($, studyName);
+    break;
+    case "preHCBB":
+    preHCBBurls.push(preHCBBreq($, studyName));
   }
+
 }
 
 // HealthCareBlueBook helper (specific to their HTML)
@@ -57,7 +62,7 @@ var HCBBreq = function($, studyName) {
     var text = $(this).children().first().text();
     price = parseInt(text.replace(/\D/g,''));
   })
-  costs[studyName] = price;
+  return price;
 }
 
 // ClearHealth helper (specific to their HTML)
@@ -68,7 +73,7 @@ var CHreq = function($, studyName) {
     prices.push(parseInt(text.replace(/\D/g,'')));
   })
   prices.sort();
-  costs[studyName] = prices[Math.floor(prices.length / 2)];
+  return prices[Math.floor(prices.length / 2)];
 }
 
 // FairHealth helper (specific to their HTML)
@@ -85,7 +90,7 @@ var FHreq = function($, studyName) {
   })
 
   // TO-DO: make a decision about price somehow
-  costs[studyName] = priceUninsured;
+  return priceUninsured;
 }
 
 // NewChoiceHealth helper (specific to their HTML)
@@ -95,11 +100,17 @@ var NCHreq = function($, studyName) {
     var text = $(this).text();
     price = parseInt(text.replace(/\D/g,''));
   })
-  costs[studyName] = price;
+  return price;
+}
+
+// returns URL for HCBB helper
+var preHCBBreq = function($, studyName) {
+  var url = $('#cphDefaultMaster_lblResultLeft').find('div.service-name').children().first().attr('href')
+  return "https://healthcarebluebook.com/" + url;
 }
 
 // Given an object of many (studyName, url, hostName)s, update costs
-function scrapeThemAll(arrOfStudyObjects) {
+var scrapeThemAll = function(arrOfStudyObjects) {
   allPromises = []
   for (var i = 0; i < arrOfStudyObjects.length; i++) {
     study = arrOfStudyObjects[i];
@@ -115,30 +126,52 @@ function scrapeThemAll(arrOfStudyObjects) {
   })
 }
 
+/* ---------------------------------------------- */
+/*                  URL GENERATORS                */
+/* ---------------------------------------------- */
 
+var genHCBB = function(id) {
+  var store;
+  var initUrl = "https://healthcarebluebook.com/page_SearchResults.aspx?SearchTerms=" + id + "&tab=ShopForCare";
+  scrape(initUrl, 'preHCBB', 'justFishing').then(function() {
+    store = preHCBBurls.pop()
+    return store;
+  });
+}
 
+var genCH = function(id) {
+  return ("https://clearhealthcosts.com/search/?query=" + id +
+  "+X-ray+exam+upper+gi+tract&zip_code=19019&radius=2500&no_zero=1&submit=")
+}
 
-
+/* ---------------------------------------------- */
+/*                  IDs TO COSTS                  */
+/* ---------------------------------------------- */
+// Takes in array of IDs, returns object of id : costs
+var id2Costs = function(ids) {
+  arrOfIDs = []
+  for (var i = 0; i < ids.length; i++) {
+    //var objHCBB = {studyName : ids[i], url : genHCBB(ids[i]), hostName : 'HCBB'};
+    var objCH = {studyName : ids[i], url : genCH(ids[i]), hostName : 'CH'};
+    //arrOfIDs.push(objHCBB)
+    arrOfIDs.push(objCH)
+  }
+  scrapeThemAll(arrOfIDs);
+  return costs;
+}
 /* ---------------------------------------------- */
 /*                    MAIN BODY                   */
 /* ---------------------------------------------- */
 
 // what to do when we visit '/scrape'
 app.get('/scrape', (req, res) => {
-// tests x3
-var testURL1 = 'https://healthcarebluebook.com/page_ProcedureDetails.aspx?cftId=390&g=Abdomen+and+Pelvis+CT+(no+contrast)';
-var testURL2 = 'https://clearhealthcosts.com/blog/procedure/ct-scan-pelvis-without-contrast/';
-var testURL3 = 'https://www.newchoicehealth.com/places/pennsylvania/philadelphia/ct-scan/ct-angiography-abdomen';
 
-var testObj1 = {studyName : 'testHCBB', url : testURL1, hostName : 'HCBB'};
-var testObj2 = {studyName : 'testCH', url : testURL2, hostName : 'CH'};
-var testObj3 = {studyName : 'testNCH', url : testURL3, hostName : 'NCH'};
+  var ids = [70551, 80048, 80061, 74000, 84075]
+  id2Costs(ids)
 
-scrapeThemAll([testObj1, testObj2, testObj3]);
-// finally, we'll just send out a message to the browser
-res.send('Check your console!')
+  // finally, we'll just send out a message to the browser
+  res.send('Check your console!')
 });
-
 
 app.listen('8081');
 console.log('The magic happens on port 8081');
