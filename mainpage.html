@@ -4,15 +4,39 @@
 <head>
   <title>Penn Medicine</title>
   <!-- Style Sheet -->
-  <link href ='pennmed_style.css' type = "text/css" rel = 'stylesheet' />
-  <!-- Scripts -->
-  <script src="jquery-3.2.1.js"></script>
-  <script src='pennmed_main.js'></script>    
+  <link href ='style.css' type = "text/css" rel = 'stylesheet' />
 </head>
 
 <body>
-  <div id="container"></div>
-  <button>Test</button>
+  <!-- This is the container for the main page -->
+  <div id="container" class="main active">
+    <div id="header">Title Here!</div>
+    <div id="searchcontainer">
+      <input type="text" id="searchbar" placeholder="Search for a study..."></input>
+      <img src="search.png" id="submit">      
+    </div>
+    <div id="seelist">Click here for a list of studies</div>
+  </div>
+
+  <!-- This is the directory -->
+  <div id="directory" class="main">
+    <img src="backward.png" id="back1">
+    <div id="directheading">Directory</div>
+    <div id="toplist"></div>
+  </div>
+
+  <!-- This is the filtered page -->
+  <div id="results" class="main">
+    <img src="backward.png" id="back2">
+    <div id="resulthead"></div>
+    <div id="resultlist"></div>
+  </div>
+
+  
+  <!-- Scripts -->
+  <script src="jquery-3.2.1.js"></script>
+  <script src="papaparse.js"></script>        
+  <script src='main.js'></script>
 </body>
 
 </html>
