@@ -165,7 +165,7 @@ var searchEvent = function(keyword) {
 // Search functionality
 $('#submit').click(function() {
     var task = document.querySelector("input[type=text]")
-    var input = task.value;
+    var input = task.value.toLowerCase();
     searchEvent(input);
 });
 

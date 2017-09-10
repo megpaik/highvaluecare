@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
-
+@import url('https://fonts.googleapis.com/css?family=ABeeZee|Comfortaa|Exo+2|Hammersmith+One|Julius+Sans+One|Nunito+Sans|Righteous');
 document {
     font-family: 'Oxygen', sans-serif;
 }
 
 body {
-    background: #00246E;
+    background: #6DAEDB;
     color: #ffffff;
     font-family: 'Oxygen', sans-serif;
   }
@@ -16,6 +16,7 @@ body {
     justify-content: center;
     font-size: 6em;
     padding-top: 1.5em;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 /* The search bar */
@@ -37,6 +38,7 @@ body {
     height: 4em;
     width: auto;
     background-color: white;
+    background-image: -moz-linear-gradient();
 }
 
 input[type="text"] {
@@ -87,7 +89,9 @@ input[type="text"] {
 #directheading {
     display: flex;
     font-size: 4em;
-    justify-content: center;
+    justify-content: left;
+    padding: 0.3em;
+    margin-left: 2em;
     margin-bottom: 0.8em;
 }
 
@@ -100,7 +104,7 @@ input[type="text"] {
 
 /* This is the CLASS for individual elements */
 .item {
-    margin-left: 0.5em;
+    margin-left: 1.8em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     text-indent: 0.5em;
@@ -130,14 +134,16 @@ input[type="text"] {
 #resulthead {
     display: flex;
     font-size: 3em;
-    justify-content: center;
+    justify-content: left;
     margin-bottom: 0.4em;
     margin-top: 0.8em;
+    padding: 0.2em;
+    margin-left: 2.5em;
 }
 
 #resultlist {
     font-size: 1.7em;
-    margin-left: 1em;
+    margin-left:3em;
     margin-right: 1em;
 }
 
@@ -154,7 +160,7 @@ td {
     text-align:center; 
     vertical-align:middle;
     padding: 0.4em;
-    border-bottom: 0.04em solid black;
+    border-bottom: 0.04em solid white;
     justify-content: center;
 } 
 
