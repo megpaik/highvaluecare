@@ -1,0 +1,33 @@
+
+PA and Lateral Chest Xray:
+  {
+    name:                       PA and Lateral Chest Xray
+    CPT:                        73500
+    'Intended Diagnosis':       Pneumonia
+    Sensitivity:                0.435
+    Specificity:                0.93
+    PPV:                        6.214285714
+    NPV:                        0.607526882
+    Cost:                       1.00
+    comments:                   {1: 'CT scan as gold standard, all CXR included'}
+    references:                 {1: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3556231/'}
+  }
+
+
+
+  'pa and lateral chest xray_pneumonoia':
+    {
+      ID:                         pa and lateral chest xray_pneumonoia
+      name:                       PA and Lateral Chest Xray
+      lowerName:                  pa and lateral chest xray
+      CPT:                        73500
+      'Intended Diagnosis':       Pneumonia
+      lowerDiag:                  pneumonoia
+      Sensitivity:                0.435
+      Specificity:                0.93
+      PPV:                        6.214285714
+      NPV:                        0.607526882
+      Cost:                       1.00
+      comments:                   {1: 'CT scan as gold standard, all CXR included'}
+      references:                 {1: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3556231/'}
+    }
