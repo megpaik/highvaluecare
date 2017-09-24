@@ -1,0 +1,27 @@
+{
+  "PA and Lateral Chest Xray": {
+      "name": "PA and Lateral Chest Xray",
+      "CPT": 73500,
+      "Intended Diagnosis": "Pneumonia",
+      "Sensitivity": 0.435,
+      "Specificity": 0.93,
+      "PPV": 6.214285714,
+      "NPV": 0.607526882,
+      "Cost": 1.00,
+      "comments": { "1": "CT scan as gold standard, all CXR included" },
+      "references": {"1": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3556231/"}
+    },
+
+    "CT Head": {
+        "name": "CT Head",
+        "CPT": 70450,
+        "Intended Diagnosis": "stroke",
+        "Sensitivity": 0.42,
+        "Specificity": 0.91,
+        "PPV": 4.666666667,
+        "NPV": 0.637362637,
+        "Cost": 2.00,
+        "comments": { "1": "on presentation" },
+        "references": {"1": "https://www.ncbi.nlm.nih.gov/pubmed/12147827" }
+      }
+}
