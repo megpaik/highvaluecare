@@ -1,4 +1,4 @@
-document.title = "highvalue_care";
+document.title = "highvalue.care";
 
 // Store data from static CSV file
 var macro = [];
@@ -160,7 +160,6 @@ var searchEvent = function(keyword) {
         var diag = sorted[i][2];
         if (target.indexOf(keyword) >= 0 || diag.indexOf(keyword) >= 0) {
             addStudy('#resultlist', sorted[i]);
-            console.log(currItems);
         }
     }
     searchPage();
@@ -170,7 +169,7 @@ var searchEvent = function(keyword) {
 $('#submit').click(function() {
     var task = document.querySelector("input[type=text]")
     var input = task.value.toLowerCase();
-    currItems = [];
+    currItems.length = 0;
     searchEvent(input);
 });
 
