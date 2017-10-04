@@ -1,91 +1,126 @@
-var express = require('express');
-var fs      = require('fs');
-var request = require('request');
-var cheerio = require('cheerio');
-var app     = express();
-let test = require('./test.js');
-var path    = require("path");
-
-var bodyParser = require('body-parser');
+var express     = require('express');
+var app         = express();
+var fs          = require('fs');
+var request     = require('request');
+var cheerio     = require('cheerio');
+var path        = require("path");
+var async       = require('async');
+var bodyParser  = require('body-parser');
 
 var costs = {}
 var preHCBBurls = []
 app.use(express.static(__dirname));
-
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+
 /* ---------------------------------------------- */
-/*                  HELPER FUNCTIONS              */
+//               OBJs to (OBJs + cost)            */
 /* ---------------------------------------------- */
 
-// generic request (get HTML) then fulfill.
-var prescrape = function(url, hostName, studyName) {
-  return new Promise(function(resolve, reject) {
-    request(url, (error, response, html) => {
-      if (error) reject(error);
-      else {
-        var fulfilVal = {html: html, hostName : hostName, studyName : studyName}
-        resolve(fulfilVal);
-      }
-    });
+// MAIN function: given an object of many (CPT, url, hostName)s, write file
+var scrapeThemAll = function(studyObjs) {
+  allPromises = []
+  for (var studyObj in studyObjs) {
+    allPromises.push(
+      getHTML(studyObjs[studyObj])
+      .then(getCost))
+    }
+
+    // allPromises contains promises that will resolve on their costedObj
+    Promise.all(allPromises).then(writeCosts)
+}
+
+// Helper Promise 1 - Given studyObj, requests for HTML
+var getHTML = function (obj) {
+  return new Promise((resolve, reject) => {
+    request(obj.url, function (error, response, html) {
+      var output = {html: html, cpt: obj.cpt, hostName: obj.hostName}
+      if (error) reject(error)
+      else resolve(output)
+    })
   })
-}
+};
 
-// generic fulfill (scrape) after request
-var scrape = function(url, hostName, studyName) {
-  var promise = prescrape(url, hostName, studyName)
-  .then((fulfilVal) => { loadAndDelegate(fulfilVal.html, fulfilVal.hostName, fulfilVal.studyName) })
-  //.catch(error => console.log(error));
-  return promise;
-}
+// Helper Promise 2 - Given html, calculates costedObj
+var getCost = function (input) {
+  return new Promise((resolve, reject) => {
+    var costedObj = {hostName: input.hostName, cpt: input.cpt,
+      cost: loadAndDelegate(input.html, input.hostName)}
+    resolve(costedObj)
+  })
+};
 
-// scrape a website (generic)
-var loadAndDelegate = function(html, hostName, studyName) {
+// getCost helper - uses cheerio and delegates
+var loadAndDelegate = function(html, hostName) {
   var $ = cheerio.load(html);
   switch (hostName) {
     case "HCBB":
-    costs[studyName] = HCBBreq($, studyName);
+    return HCBBreq($);
     break;
     case "CH":
-    costs[studyName] = CHreq($, studyName);
+    return CHreq($);
     break;
     case "FH":
-    costs[studyName] = FHreq($, studyName);
+    return FHreq($);
     break;
     case "NCH":
-    costs[studyName] = NCHreq($, studyName);
+    return NCHreq($);
     break;
     case "preHCBB":
-    preHCBBurls.push(preHCBBreq($, studyName));
+    preHCBBurls.push(preHCBBreq($));
   }
 
 }
 
-// HealthCareBlueBook helper (specific to their HTML)
-var HCBBreq = function($, studyName) {
+// Helper - Takes an array of costedObjs and writes the file
+var writeCosts = function (costedObjs) {
+
+  allCosts = {}
+  for (var o in costedObjs) {
+    var curr = {}
+    if (allCosts[costedObjs[o].cpt] != undefined) {
+      curr = allCosts[costedObjs[o].cpt]
+    }
+    curr[costedObjs[o].hostName] = costedObjs[o].cost
+    allCosts[costedObjs[o].cpt] = curr
+  }
+
+  fs.writeFile('output.json', JSON.stringify(allCosts), (err) => {
+    if (err) console.log(err);
+    else console.log('File  written!');
+  })
+}
+
+/* ---------------------------------------------- */
+/*             HTML to COST delegatees            */
+/* ---------------------------------------------- */
+
+// HealthCareBlueBook helper
+var HCBBreq = function($, cpt) {
   var price = -1;
   // get els with matching tag, and run a function on them?
   $('.arrow-box').each(function(i, elem){
     var text = $(this).children().first().text();
     price = parseInt(text.replace(/\D/g,''));
   })
+
   return price;
 }
 
-// ClearHealth helper (specific to their HTML)
-var CHreq = function($, studyName) {
+// ClearHealth helper
+var CHreq = function($, cpt) {
   var prices = [];
   $('.price-badge.price-charged').each(function(i, elem){
     var text = $(this).children().last().text();
     prices.push(parseInt(text.replace(/\D/g,'')));
   })
-  prices.sort();
+  prices.sort((a,b) => { return a - b });
   return prices[Math.floor(prices.length / 2)];
 }
 
-// FairHealth helper (specific to their HTML)
-var FHreq = function($, studyName) {
+// FairHealth helper
+var FHreq = function($, cpt) {
   var priceInsured = -1;
   var priceUninsured = -1;
   $('.circle out-net-summary').each(function(i, elem){
@@ -101,8 +136,8 @@ var FHreq = function($, studyName) {
   return priceUninsured;
 }
 
-// NewChoiceHealth helper (specific to their HTML)
-var NCHreq = function($, studyName) {
+// NewChoiceHealth helper
+var NCHreq = function($, cpt) {
   var price = -1;
   $('.pull-left.cost.average').each(function(i, elem){
     var text = $(this).text();
@@ -111,31 +146,16 @@ var NCHreq = function($, studyName) {
   return price;
 }
 
+
 // returns URL for HCBB helper
-var preHCBBreq = function($, studyName) {
+// TODO: FIX
+var preHCBBreq = function($, cpt) {
   var url = $('#cphDefaultMaster_lblResultLeft').find('div.service-name').children().first().attr('href')
   return "https://healthcarebluebook.com/" + url;
 }
 
-// Given an object of many (studyName, url, hostName)s, update costs
-var scrapeThemAll = function(arrOfStudyObjects) {
-  allPromises = []
-  for (var i = 0; i < arrOfStudyObjects.length; i++) {
-    study = arrOfStudyObjects[i];
-    allPromises[i] = scrape(study.url, study.hostName, study.studyName)
-  }
-
-  Promise.all(allPromises)
-  .then(() => {
-    // finish by writing the file
-    fs.writeFile('output.json', JSON.stringify(costs, null, 4), (err) => {
-      console.log('File  written!');
-    })
-  })
-}
-
 /* ---------------------------------------------- */
-/*                  URL GENERATORS                */
+/*               CPT to URL GENERATORS            */
 /* ---------------------------------------------- */
 
 var genHCBB = function(id) {
@@ -149,44 +169,53 @@ var genHCBB = function(id) {
 
 var genCH = function(id) {
   return ("https://clearhealthcosts.com/search/?query=" + id +
-  "+X-ray+exam+upper+gi+tract&zip_code=19019&radius=2500&no_zero=1&submit=")
+  "&zip_code=19019&radius=2500&no_zero=1&submit=")
 }
 
 /* ---------------------------------------------- */
-/*                  IDs TO COSTS                  */
+/*                  CPTs TO OBJS                  */
 /* ---------------------------------------------- */
-// Takes in array of IDs, returns object of id : costs
-var id2Costs = function(ids) {
-  arrOfIDs = []
-  for (var i = 0; i < ids.length; i++) {
-    //var objHCBB = {studyName : ids[i], url : genHCBB(ids[i]), hostName : 'HCBB'};
-    var objCH = {studyName : ids[i], url : genCH(ids[i]), hostName : 'CH'};
-    //arrOfIDs.push(objHCBB)
-    arrOfIDs.push(objCH)
+
+// Takes in array of IDs, returns objects {cpt, url, hostName}
+// TODO: Implement more than just CH
+var id2Objs = function(CPTs) {
+  objs = {}
+  for (var cpt in CPTs) {
+    var objCH = {cpt: CPTs[cpt], url: genCH(CPTs[cpt]), hostName: 'CH'}
+    objs['CH_' + CPTs[cpt]] = objCH
   }
-  scrapeThemAll(arrOfIDs);
-  return costs;
+  return objs
 }
+
 /* ---------------------------------------------- */
 /*                    MAIN BODY                   */
 /* ---------------------------------------------- */
 
-// what to do when we visit '/scrape'
-app.get('/scrape', (req, res) => {
+// here's my test case
+//var ids = [70551, 80048, 80061, 74000, 84075]
 
-  var ids = [70551, 80048, 80061, 74000, 84075]
-  id2Costs(ids)
+fs.readFile('cpts.csv', 'utf8', function (err, data) {
+  console.log(typeof data)
+  var dataArray = data.split(/\r|\n/);
+  var ids = dataArray;
+  // werk
+  var objs = id2Objs(ids)
+  var costedObjs = scrapeThemAll(objs)
+})
 
-  // finally, we'll just send out a message to the browser
-  res.sendFile(path.join(__dirname+'/mainpage.html'));
-});
 
-// app.get('/data', (req, res) => {
-  
-//     // finally, we'll just send out a message to the browser
-//     res.send('test');
-//   });
 
-app.listen('8081');
-console.log('The magic happens on port 8081');
+
+
+
+// // what to do when we visit '/scrape'
+// app.get('/scrape', (req, res) => {
+//
+//
+//   // finally, we'll just send out a message to the browser
+//   res.sendFile(path.join(__dirname+'/mainpage.html'));
+// });
+//
+// app.listen('8081');
+// console.log('The magic happens on port 8081');
 // exports = module.exports = app;
