@@ -1,12 +1,12 @@
 ﻿{
   "0006M": {
      "CPT":"0006M"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Onc hep gene risk classifier"
     },
   "0007M": {
      "CPT":"0007M"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Onc gastro 51 gene nomogram"
     },
   "0008M": {
@@ -16,12 +16,12 @@
     },
   "0009M": {
      "CPT":"0009M"
-    ,"Cost":602.10
+    ,"Cost":602.1
     ,"Comments":"Fetal aneuploidy trisom risk"
     },
   "36415": {
      "CPT":"36415"
-    ,"Cost":3.00
+    ,"Cost":3
     ,"Comments":"Routine venipuncture"
     },
   "78267": {
@@ -36,38 +36,18 @@
     },
   "80047": {
      "CPT":"80047"
-    ,"Cost":11.60
-    ,"Comments":"Metabolic panel ionized ca"
-    },
-  "80047": {
-     "CPT":"80047"
-    ,"Cost":11.60
+    ,"Cost":11.6
     ,"Comments":"Metabolic panel ionized ca"
     },
   "80048": {
      "CPT":"80048"
-    ,"Cost":11.60
-    ,"Comments":"Metabolic panel total ca"
-    },
-  "80048": {
-     "CPT":"80048"
-    ,"Cost":11.60
+    ,"Cost":11.6
     ,"Comments":"Metabolic panel total ca"
     },
   "80051": {
      "CPT":"80051"
     ,"Cost":9.62
     ,"Comments":"Electrolyte panel"
-    },
-  "80051": {
-     "CPT":"80051"
-    ,"Cost":9.62
-    ,"Comments":"Electrolyte panel"
-    },
-  "80053": {
-     "CPT":"80053"
-    ,"Cost":14.49
-    ,"Comments":"Comprehen metabolic panel"
     },
   "80053": {
      "CPT":"80053"
@@ -83,16 +63,6 @@
      "CPT":"80061"
     ,"Cost":18.37
     ,"Comments":"Lipid panel"
-    },
-  "80061": {
-     "CPT":"80061"
-    ,"Cost":18.37
-    ,"Comments":"Lipid panel"
-    },
-  "80069": {
-     "CPT":"80069"
-    ,"Cost":11.91
-    ,"Comments":"Renal function panel"
     },
   "80069": {
      "CPT":"80069"
@@ -121,7 +91,7 @@
     },
   "80155": {
      "CPT":"80155"
-    ,"Cost":19.40
+    ,"Cost":19.4
     ,"Comments":"Drug screen quant caffeine"
     },
   "80156": {
@@ -209,11 +179,6 @@
     ,"Cost":9.07
     ,"Comments":"Assay of lithium"
     },
-  "80178": {
-     "CPT":"80178"
-    ,"Cost":9.07
-    ,"Comments":"Assay of lithium"
-    },
   "80180": {
      "CPT":"80180"
     ,"Cost":24.76
@@ -271,7 +236,7 @@
     },
   "80198": {
      "CPT":"80198"
-    ,"Cost":19.40
+    ,"Cost":19.4
     ,"Comments":"Assay of theophylline"
     },
   "80199": {
@@ -381,7 +346,7 @@
     },
   "80422": {
      "CPT":"80422"
-    ,"Cost":63.20
+    ,"Cost":63.2
     ,"Comments":"Glucagon tolerance panel"
     },
   "80424": {
@@ -396,7 +361,7 @@
     },
   "80428": {
      "CPT":"80428"
-    ,"Cost":91.50
+    ,"Cost":91.5
     ,"Comments":"Growth hormone panel"
     },
   "80432": {
@@ -426,7 +391,7 @@
     },
   "80439": {
      "CPT":"80439"
-    ,"Cost":92.20
+    ,"Cost":92.2
     ,"Comments":"TRH stimulation panel"
     },
   "81000": {
@@ -441,13 +406,8 @@
     },
   "81002": {
      "CPT":"81002"
-    ,"Cost":3.50
+    ,"Cost":3.5
     ,"Comments":"Urinalysis nonauto w/o scope"
-    },
-  "81003": {
-     "CPT":"81003"
-    ,"Cost":3.08
-    ,"Comments":"Urinalysis auto w/o scope"
     },
   "81003": {
      "CPT":"81003"
@@ -458,11 +418,6 @@
      "CPT":"81005"
     ,"Cost":2.97
     ,"Comments":"Urinalysis"
-    },
-  "81007": {
-     "CPT":"81007"
-    ,"Cost":3.52
-    ,"Comments":"Urine screen for bacteria"
     },
   "81007": {
      "CPT":"81007"
@@ -566,7 +521,7 @@
     },
   "81225": {
      "CPT":"81225"
-    ,"Cost":293.40
+    ,"Cost":293.4
     ,"Comments":"Cyp2c19 gene com variants"
     },
   "81226": {
@@ -586,7 +541,7 @@
     },
   "81240": {
      "CPT":"81240"
-    ,"Cost":67.50
+    ,"Cost":67.5
     ,"Comments":"F2 gene"
     },
   "81241": {
@@ -616,7 +571,7 @@
     },
   "81263": {
      "CPT":"81263"
-    ,"Cost":404.00
+    ,"Cost":404
     ,"Comments":"Igh vari regional mutation"
     },
   "81264": {
@@ -726,12 +681,12 @@
     },
   "81301": {
      "CPT":"81301"
-    ,"Cost":397.20
+    ,"Cost":397.2
     ,"Comments":"Microsatellite instability"
     },
   "81310": {
      "CPT":"81310"
-    ,"Cost":248.50
+    ,"Cost":248.5
     ,"Comments":"Npm1 gene"
     },
   "81311": {
@@ -776,7 +731,7 @@
     },
   "81321": {
      "CPT":"81321"
-    ,"Cost":604.00
+    ,"Cost":604
     ,"Comments":"Pten gene full sequence"
     },
   "81322": {
@@ -811,7 +766,7 @@
     },
   "81342": {
      "CPT":"81342"
-    ,"Cost":276.40
+    ,"Cost":276.4
     ,"Comments":"Trg gene rearrangement anal"
     },
   "81370": {
@@ -836,7 +791,7 @@
     },
   "81375": {
      "CPT":"81375"
-    ,"Cost":302.80
+    ,"Cost":302.8
     ,"Comments":"Hla ii typing ag equiv lr"
     },
   "81376": {
@@ -876,22 +831,22 @@
     },
   "81383": {
      "CPT":"81383"
-    ,"Cost":149.70
+    ,"Cost":149.7
     ,"Comments":"Hla ii typing 1 allele hr"
     },
   "81410": {
      "CPT":"81410"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Aortic dysfunction/dilation"
     },
   "81411": {
      "CPT":"81411"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Aortic dysfunction/dilation"
     },
   "81412": {
      "CPT":"81412"
-    ,"Cost":602.10
+    ,"Cost":602.1
     ,"Comments":"Ashkenazi jewish assoc dis"
     },
   "81413": {
@@ -906,17 +861,17 @@
     },
   "81415": {
      "CPT":"81415"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Exome sequence analysis"
     },
   "81416": {
      "CPT":"81416"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Exome sequence analysis"
     },
   "81417": {
      "CPT":"81417"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Exome re-evaluation"
     },
   "81420": {
@@ -931,27 +886,27 @@
     },
   "81425": {
      "CPT":"81425"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Genome sequence analysis"
     },
   "81426": {
      "CPT":"81426"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Genome sequence analysis"
     },
   "81427": {
      "CPT":"81427"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Genome re-evaluation"
     },
   "81430": {
      "CPT":"81430"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Hearing loss sequence analys"
     },
   "81431": {
      "CPT":"81431"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Hearing loss dup/del analys"
     },
   "81432": {
@@ -961,12 +916,12 @@
     },
   "81433": {
      "CPT":"81433"
-    ,"Cost":602.10
+    ,"Cost":602.1
     ,"Comments":"Hrdtry brst ca-rlatd dsordrs"
     },
   "81434": {
      "CPT":"81434"
-    ,"Cost":602.10
+    ,"Cost":602.1
     ,"Comments":"Hereditary retinal disorders"
     },
   "81435": {
@@ -981,12 +936,12 @@
     },
   "81437": {
      "CPT":"81437"
-    ,"Cost":602.10
+    ,"Cost":602.1
     ,"Comments":"Heredtry nurondcrn tum dsrdr"
     },
   "81438": {
      "CPT":"81438"
-    ,"Cost":602.10
+    ,"Cost":602.1
     ,"Comments":"Heredtry nurondcrn tum dsrdr"
     },
   "81439": {
@@ -996,17 +951,17 @@
     },
   "81440": {
      "CPT":"81440"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Mitochondrial gene"
     },
   "81442": {
      "CPT":"81442"
-    ,"Cost":602.10
+    ,"Cost":602.1
     ,"Comments":"Noonan spectrum disorders"
     },
   "81445": {
      "CPT":"81445"
-    ,"Cost":602.10
+    ,"Cost":602.1
     ,"Comments":"Targeted genomic seq analys"
     },
   "81450": {
@@ -1016,27 +971,27 @@
     },
   "81455": {
      "CPT":"81455"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Targeted genomic seq analys"
     },
   "81460": {
      "CPT":"81460"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Whole mitochondrial genome"
     },
   "81465": {
      "CPT":"81465"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"Whole mitochondrial genome"
     },
   "81470": {
      "CPT":"81470"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"X-linked intellectual dblt"
     },
   "81471": {
      "CPT":"81471"
-    ,"Cost":0.00
+    ,"Cost":0
     ,"Comments":"X-linked intellectual dblt"
     },
   "81490": {
@@ -1066,7 +1021,7 @@
     },
   "81536": {
      "CPT":"81536"
-    ,"Cost":178.80
+    ,"Cost":178.8
     ,"Comments":"Oncology gynecologic"
     },
   "81538": {
@@ -1076,17 +1031,17 @@
     },
   "81539": {
      "CPT":"81539"
-    ,"Cost":602.10
+    ,"Cost":602.1
     ,"Comments":"Oncology prostate prob score"
     },
   "81540": {
      "CPT":"81540"
-    ,"Cost":2920.30
+    ,"Cost":2920.3
     ,"Comments":"Oncology tum unknown origin"
     },
   "81545": {
      "CPT":"81545"
-    ,"Cost":3222.40
+    ,"Cost":3222.4
     ,"Comments":"Oncology thyroid"
     },
   "81595": {
@@ -1096,13 +1051,8 @@
     },
   "82009": {
      "CPT":"82009"
-    ,"Cost":6.20
+    ,"Cost":6.2
     ,"Comments":"Test for acetone/ketones"
-    },
-  "82010": {
-     "CPT":"82010"
-    ,"Cost":9.87
-    ,"Comments":"Acetone assay"
     },
   "82010": {
      "CPT":"82010"
@@ -1139,16 +1089,6 @@
     ,"Cost":6.79
     ,"Comments":"Assay of serum albumin"
     },
-  "82040": {
-     "CPT":"82040"
-    ,"Cost":6.79
-    ,"Comments":"Assay of serum albumin"
-    },
-  "82042": {
-     "CPT":"82042"
-    ,"Cost":2.42
-    ,"Comments":"Assay of urine albumin"
-    },
   "82042": {
      "CPT":"82042"
     ,"Cost":2.42
@@ -1158,16 +1098,6 @@
      "CPT":"82043"
     ,"Cost":7.93
     ,"Comments":"Microalbumin quantitative"
-    },
-  "82043": {
-     "CPT":"82043"
-    ,"Cost":7.93
-    ,"Comments":"Microalbumin quantitative"
-    },
-  "82044": {
-     "CPT":"82044"
-    ,"Cost":3.47
-    ,"Comments":"Microalbumin semiquant"
     },
   "82044": {
      "CPT":"82044"
@@ -1191,7 +1121,7 @@
     },
   "82088": {
      "CPT":"82088"
-    ,"Cost":55.90
+    ,"Cost":55.9
     ,"Comments":"Assay of aldosterone"
     },
   "82103": {
@@ -1223,11 +1153,6 @@
      "CPT":"82108"
     ,"Cost":34.95
     ,"Comments":"Assay of aluminum"
-    },
-  "82120": {
-     "CPT":"82120"
-    ,"Cost":3.95
-    ,"Comments":"Amines vaginal fluid qual"
     },
   "82120": {
      "CPT":"82120"
@@ -1274,11 +1199,6 @@
     ,"Cost":8.89
     ,"Comments":"Assay of amylase"
     },
-  "82150": {
-     "CPT":"82150"
-    ,"Cost":8.89
-    ,"Comments":"Assay of amylase"
-    },
   "82154": {
      "CPT":"82154"
     ,"Cost":39.55
@@ -1291,7 +1211,7 @@
     },
   "82160": {
      "CPT":"82160"
-    ,"Cost":34.30
+    ,"Cost":34.3
     ,"Comments":"Assay of androsterone"
     },
   "82163": {
@@ -1344,11 +1264,6 @@
     ,"Cost":6.88
     ,"Comments":"Bilirubin total"
     },
-  "82247": {
-     "CPT":"82247"
-    ,"Cost":6.88
-    ,"Comments":"Bilirubin total"
-    },
   "82248": {
      "CPT":"82248"
     ,"Cost":6.88
@@ -1374,20 +1289,10 @@
     ,"Cost":4.46
     ,"Comments":"Occult blood other sources"
     },
-  "82271": {
-     "CPT":"82271"
-    ,"Cost":4.46
-    ,"Comments":"Occult blood other sources"
-    },
   "82272": {
      "CPT":"82272"
     ,"Cost":4.46
     ,"Comments":"Occult bld feces 1-3 tests"
-    },
-  "82274": {
-     "CPT":"82274"
-    ,"Cost":21.82
-    ,"Comments":"Assay test for blood fecal"
     },
   "82274": {
      "CPT":"82274"
@@ -1419,16 +1324,6 @@
     ,"Cost":7.08
     ,"Comments":"Assay of calcium"
     },
-  "82310": {
-     "CPT":"82310"
-    ,"Cost":7.08
-    ,"Comments":"Assay of calcium"
-    },
-  "82330": {
-     "CPT":"82330"
-    ,"Cost":18.76
-    ,"Comments":"Assay of calcium"
-    },
   "82330": {
      "CPT":"82330"
     ,"Cost":18.76
@@ -1436,7 +1331,7 @@
     },
   "82331": {
      "CPT":"82331"
-    ,"Cost":7.10
+    ,"Cost":7.1
     ,"Comments":"Calcium infusion test"
     },
   "82340": {
@@ -1471,7 +1366,7 @@
     },
   "82374": {
      "CPT":"82374"
-    ,"Cost":6.70
+    ,"Cost":6.7
     ,"Comments":"Assay blood carbon dioxide"
     },
   "82375": {
@@ -1539,19 +1434,14 @@
     ,"Cost":6.31
     ,"Comments":"Assay of blood chloride"
     },
-  "82435": {
-     "CPT":"82435"
-    ,"Cost":6.31
-    ,"Comments":"Assay of blood chloride"
-    },
   "82436": {
      "CPT":"82436"
-    ,"Cost":6.90
+    ,"Cost":6.9
     ,"Comments":"Assay of urine chloride"
     },
   "82438": {
      "CPT":"82438"
-    ,"Cost":6.70
+    ,"Cost":6.7
     ,"Comments":"Assay other fluid chlorides"
     },
   "82441": {
@@ -1564,14 +1454,9 @@
     ,"Cost":5.97
     ,"Comments":"Assay bld/serum cholesterol"
     },
-  "82465": {
-     "CPT":"82465"
-    ,"Cost":5.97
-    ,"Comments":"Assay bld/serum cholesterol"
-    },
   "82480": {
      "CPT":"82480"
-    ,"Cost":10.80
+    ,"Cost":10.8
     ,"Comments":"Assay serum cholinesterase"
     },
   "82482": {
@@ -1586,18 +1471,13 @@
     },
   "82495": {
      "CPT":"82495"
-    ,"Cost":9.60
+    ,"Cost":9.6
     ,"Comments":"Assay of chromium"
     },
   "82507": {
      "CPT":"82507"
     ,"Cost":38.14
     ,"Comments":"Assay of citrate"
-    },
-  "82523": {
-     "CPT":"82523"
-    ,"Cost":14.89
-    ,"Comments":"Collagen crosslinks"
     },
   "82523": {
      "CPT":"82523"
@@ -1639,11 +1519,6 @@
     ,"Cost":8.93
     ,"Comments":"Assay of ck (cpk)"
     },
-  "82550": {
-     "CPT":"82550"
-    ,"Cost":8.93
-    ,"Comments":"Assay of ck (cpk)"
-    },
   "82552": {
      "CPT":"82552"
     ,"Cost":18.37
@@ -1664,19 +1539,9 @@
     ,"Cost":7.03
     ,"Comments":"Assay of creatinine"
     },
-  "82565": {
-     "CPT":"82565"
-    ,"Cost":7.03
-    ,"Comments":"Assay of creatinine"
-    },
   "82570": {
      "CPT":"82570"
-    ,"Cost":7.10
-    ,"Comments":"Assay of urine creatinine"
-    },
-  "82570": {
-     "CPT":"82570"
-    ,"Cost":7.10
+    ,"Cost":7.1
     ,"Comments":"Assay of urine creatinine"
     },
   "82575": {
@@ -1711,7 +1576,7 @@
     },
   "82615": {
      "CPT":"82615"
-    ,"Cost":11.20
+    ,"Cost":11.2
     ,"Comments":"Test for urine cystines"
     },
   "82626": {
@@ -1721,12 +1586,12 @@
     },
   "82627": {
      "CPT":"82627"
-    ,"Cost":30.50
+    ,"Cost":30.5
     ,"Comments":"Dehydroepiandrosterone"
     },
   "82633": {
      "CPT":"82633"
-    ,"Cost":42.50
+    ,"Cost":42.5
     ,"Comments":"Desoxycorticosterone"
     },
   "82634": {
@@ -1794,11 +1659,6 @@
     ,"Cost":34.23
     ,"Comments":"Assay of estrone"
     },
-  "82679": {
-     "CPT":"82679"
-    ,"Cost":34.23
-    ,"Comments":"Assay of estrone"
-    },
   "82693": {
      "CPT":"82693"
     ,"Cost":16.79
@@ -1836,7 +1696,7 @@
     },
   "82728": {
      "CPT":"82728"
-    ,"Cost":18.70
+    ,"Cost":18.7
     ,"Comments":"Assay of ferritin"
     },
   "82731": {
@@ -1876,7 +1736,7 @@
     },
   "82775": {
      "CPT":"82775"
-    ,"Cost":3.70
+    ,"Cost":3.7
     ,"Comments":"Assay galactose transferase"
     },
   "82776": {
@@ -1901,7 +1761,7 @@
     },
   "82787": {
      "CPT":"82787"
-    ,"Cost":11.00
+    ,"Cost":11
     ,"Comments":"Igg 1 2 3 or 4 each"
     },
   "82803": {
@@ -1921,7 +1781,7 @@
     },
   "82820": {
      "CPT":"82820"
-    ,"Cost":13.70
+    ,"Cost":13.7
     ,"Comments":"Hemoglobin-oxygen affinity"
     },
   "82930": {
@@ -1941,7 +1801,7 @@
     },
   "82943": {
      "CPT":"82943"
-    ,"Cost":19.60
+    ,"Cost":19.6
     ,"Comments":"Assay of glucagon"
     },
   "82945": {
@@ -1959,11 +1819,6 @@
     ,"Cost":5.39
     ,"Comments":"Assay glucose blood quant"
     },
-  "82947": {
-     "CPT":"82947"
-    ,"Cost":5.39
-    ,"Comments":"Assay glucose blood quant"
-    },
   "82948": {
      "CPT":"82948"
     ,"Cost":4.35
@@ -1974,25 +1829,10 @@
     ,"Cost":6.51
     ,"Comments":"Glucose test"
     },
-  "82950": {
-     "CPT":"82950"
-    ,"Cost":6.51
-    ,"Comments":"Glucose test"
-    },
   "82951": {
      "CPT":"82951"
     ,"Cost":17.66
     ,"Comments":"Glucose tolerance test (GTT)"
-    },
-  "82951": {
-     "CPT":"82951"
-    ,"Cost":17.66
-    ,"Comments":"Glucose tolerance test (GTT)"
-    },
-  "82952": {
-     "CPT":"82952"
-    ,"Cost":3.95
-    ,"Comments":"GTT-added samples"
     },
   "82952": {
      "CPT":"82952"
@@ -2001,12 +1841,12 @@
     },
   "82955": {
      "CPT":"82955"
-    ,"Cost":13.30
+    ,"Cost":13.3
     ,"Comments":"Assay of g6pd enzyme"
     },
   "82960": {
      "CPT":"82960"
-    ,"Cost":8.30
+    ,"Cost":8.3
     ,"Comments":"Test for G6PD enzyme"
     },
   "82962": {
@@ -2021,13 +1861,8 @@
     },
   "82965": {
      "CPT":"82965"
-    ,"Cost":10.60
+    ,"Cost":10.6
     ,"Comments":"Assay of gdh enzyme"
-    },
-  "82977": {
-     "CPT":"82977"
-    ,"Cost":9.88
-    ,"Comments":"Assay of GGT"
     },
   "82977": {
      "CPT":"82977"
@@ -2049,16 +1884,6 @@
     ,"Cost":19.91
     ,"Comments":"Assay of glycated protein"
     },
-  "82985": {
-     "CPT":"82985"
-    ,"Cost":19.91
-    ,"Comments":"Assay of glycated protein"
-    },
-  "83001": {
-     "CPT":"83001"
-    ,"Cost":25.49
-    ,"Comments":"Assay of gonadotropin (fsh)"
-    },
   "83001": {
      "CPT":"83001"
     ,"Cost":25.49
@@ -2066,12 +1891,7 @@
     },
   "83002": {
      "CPT":"83002"
-    ,"Cost":25.40
-    ,"Comments":"Assay of gonadotropin (lh)"
-    },
-  "83002": {
-     "CPT":"83002"
-    ,"Cost":25.40
+    ,"Cost":25.4
     ,"Comments":"Assay of gonadotropin (lh)"
     },
   "83003": {
@@ -2111,7 +1931,7 @@
     },
   "83015": {
      "CPT":"83015"
-    ,"Cost":13.80
+    ,"Cost":13.8
     ,"Comments":"Heavy metal screen"
     },
   "83018": {
@@ -2143,16 +1963,6 @@
      "CPT":"83036"
     ,"Cost":13.32
     ,"Comments":"Glycosylated hemoglobin test"
-    },
-  "83036": {
-     "CPT":"83036"
-    ,"Cost":13.32
-    ,"Comments":"Glycosylated hemoglobin test"
-    },
-  "83037": {
-     "CPT":"83037"
-    ,"Cost":13.32
-    ,"Comments":"Glycosylated hb home device"
     },
   "83037": {
      "CPT":"83037"
@@ -2226,7 +2036,7 @@
     },
   "83497": {
      "CPT":"83497"
-    ,"Cost":17.50
+    ,"Cost":17.5
     ,"Comments":"Assay of 5-hiaa"
     },
   "83498": {
@@ -2254,16 +2064,6 @@
     ,"Cost":15.09
     ,"Comments":"Immunoassay nonantibody"
     },
-  "83516": {
-     "CPT":"83516"
-    ,"Cost":15.09
-    ,"Comments":"Immunoassay nonantibody"
-    },
-  "83518": {
-     "CPT":"83518"
-    ,"Cost":11.63
-    ,"Comments":"Immunoassay dipstick"
-    },
   "83518": {
      "CPT":"83518"
     ,"Cost":11.63
@@ -2273,11 +2073,6 @@
      "CPT":"83519"
     ,"Cost":18.53
     ,"Comments":"Ria nonantibody"
-    },
-  "83520": {
-     "CPT":"83520"
-    ,"Cost":17.76
-    ,"Comments":"Immunoassay quant nos nonab"
     },
   "83520": {
      "CPT":"83520"
@@ -2326,7 +2121,7 @@
     },
   "83593": {
      "CPT":"83593"
-    ,"Cost":31.70
+    ,"Cost":31.7
     ,"Comments":"Fractionation ketosteroids"
     },
   "83605": {
@@ -2363,11 +2158,6 @@
      "CPT":"83633"
     ,"Cost":7.54
     ,"Comments":"Test urine for lactose"
-    },
-  "83655": {
-     "CPT":"83655"
-    ,"Cost":16.61
-    ,"Comments":"Assay of lead"
     },
   "83655": {
      "CPT":"83655"
@@ -2434,19 +2224,9 @@
     ,"Cost":11.24
     ,"Comments":"Assay of lipoprotein"
     },
-  "83718": {
-     "CPT":"83718"
-    ,"Cost":11.24
-    ,"Comments":"Assay of lipoprotein"
-    },
   "83719": {
      "CPT":"83719"
     ,"Cost":15.96
-    ,"Comments":"Assay of blood lipoprotein"
-    },
-  "83721": {
-     "CPT":"83721"
-    ,"Cost":13.09
     ,"Comments":"Assay of blood lipoprotein"
     },
   "83721": {
@@ -2481,7 +2261,7 @@
     },
   "83825": {
      "CPT":"83825"
-    ,"Cost":22.30
+    ,"Cost":22.3
     ,"Comments":"Assay of mercury"
     },
   "83835": {
@@ -2493,11 +2273,6 @@
      "CPT":"83857"
     ,"Cost":14.73
     ,"Comments":"Assay of methemalbumin"
-    },
-  "83861": {
-     "CPT":"83861"
-    ,"Cost":22.66
-    ,"Comments":"Microfluid analy tears"
     },
   "83861": {
      "CPT":"83861"
@@ -2516,7 +2291,7 @@
     },
   "83873": {
      "CPT":"83873"
-    ,"Cost":23.60
+    ,"Cost":23.6
     ,"Comments":"Assay of csf protein"
     },
   "83874": {
@@ -2528,11 +2303,6 @@
      "CPT":"83876"
     ,"Cost":46.56
     ,"Comments":"Assay myeloperoxidase"
-    },
-  "83880": {
-     "CPT":"83880"
-    ,"Cost":46.56
-    ,"Comments":"Assay of natriuretic peptide"
     },
   "83880": {
      "CPT":"83880"
@@ -2609,11 +2379,6 @@
     ,"Cost":3.82
     ,"Comments":"Assay ph body fluid nos"
     },
-  "83986": {
-     "CPT":"83986"
-    ,"Cost":3.82
-    ,"Comments":"Assay ph body fluid nos"
-    },
   "83987": {
      "CPT":"83987"
     ,"Cost":21.79
@@ -2656,12 +2421,7 @@
     },
   "84075": {
      "CPT":"84075"
-    ,"Cost":7.10
-    ,"Comments":"Assay alkaline phosphatase"
-    },
-  "84075": {
-     "CPT":"84075"
-    ,"Cost":7.10
+    ,"Cost":7.1
     ,"Comments":"Assay alkaline phosphatase"
     },
   "84078": {
@@ -2691,12 +2451,12 @@
     },
   "84100": {
      "CPT":"84100"
-    ,"Cost":6.50
+    ,"Cost":6.5
     ,"Comments":"Assay of phosphorus"
     },
   "84105": {
      "CPT":"84105"
-    ,"Cost":7.10
+    ,"Cost":7.1
     ,"Comments":"Assay of urine phosphorus"
     },
   "84106": {
@@ -2728,11 +2488,6 @@
      "CPT":"84126"
     ,"Cost":23.86
     ,"Comments":"Assay of feces porphyrins"
-    },
-  "84132": {
-     "CPT":"84132"
-    ,"Cost":6.31
-    ,"Comments":"Assay of serum potassium"
     },
   "84132": {
      "CPT":"84132"
@@ -2804,11 +2559,6 @@
     ,"Cost":5.03
     ,"Comments":"Assay of protein serum"
     },
-  "84155": {
-     "CPT":"84155"
-    ,"Cost":5.03
-    ,"Comments":"Assay of protein serum"
-    },
   "84156": {
      "CPT":"84156"
     ,"Cost":5.03
@@ -2819,19 +2569,14 @@
     ,"Cost":5.03
     ,"Comments":"Assay of protein other"
     },
-  "84157": {
-     "CPT":"84157"
-    ,"Cost":5.03
-    ,"Comments":"Assay of protein other"
-    },
   "84160": {
      "CPT":"84160"
-    ,"Cost":7.10
+    ,"Cost":7.1
     ,"Comments":"Assay of protein any source"
     },
   "84163": {
      "CPT":"84163"
-    ,"Cost":19.90
+    ,"Cost":19.9
     ,"Comments":"Pappa serum"
     },
   "84165": {
@@ -2896,7 +2641,7 @@
     },
   "84234": {
      "CPT":"84234"
-    ,"Cost":89.00
+    ,"Cost":89
     ,"Comments":"Assay of progesterone"
     },
   "84235": {
@@ -2926,7 +2671,7 @@
     },
   "84260": {
      "CPT":"84260"
-    ,"Cost":42.50
+    ,"Cost":42.5
     ,"Comments":"Assay of serotonin"
     },
   "84270": {
@@ -2946,12 +2691,7 @@
     },
   "84295": {
      "CPT":"84295"
-    ,"Cost":6.60
-    ,"Comments":"Assay of serum sodium"
-    },
-  "84295": {
-     "CPT":"84295"
-    ,"Cost":6.60
+    ,"Cost":6.6
     ,"Comments":"Assay of serum sodium"
     },
   "84300": {
@@ -2981,7 +2721,7 @@
     },
   "84375": {
      "CPT":"84375"
-    ,"Cost":26.90
+    ,"Cost":26.9
     ,"Comments":"Chromatogram assay sugars"
     },
   "84376": {
@@ -3069,11 +2809,6 @@
     ,"Cost":23.05
     ,"Comments":"Assay thyroid stim hormone"
     },
-  "84443": {
-     "CPT":"84443"
-    ,"Cost":23.05
-    ,"Comments":"Assay thyroid stim hormone"
-    },
   "84445": {
      "CPT":"84445"
     ,"Cost":69.76
@@ -3091,18 +2826,8 @@
     },
   "84450": {
      "CPT":"84450"
-    ,"Cost":7.10
+    ,"Cost":7.1
     ,"Comments":"Transferase (AST) (SGOT)"
-    },
-  "84450": {
-     "CPT":"84450"
-    ,"Cost":7.10
-    ,"Comments":"Transferase (AST) (SGOT)"
-    },
-  "84460": {
-     "CPT":"84460"
-    ,"Cost":7.27
-    ,"Comments":"Alanine amino (ALT) (SGPT)"
     },
   "84460": {
      "CPT":"84460"
@@ -3113,11 +2838,6 @@
      "CPT":"84466"
     ,"Cost":17.51
     ,"Comments":"Assay of transferrin"
-    },
-  "84478": {
-     "CPT":"84478"
-    ,"Cost":7.88
-    ,"Comments":"Assay of triglycerides"
     },
   "84478": {
      "CPT":"84478"
@@ -3179,11 +2899,6 @@
     ,"Cost":5.42
     ,"Comments":"Assay of urea nitrogen"
     },
-  "84520": {
-     "CPT":"84520"
-    ,"Cost":5.42
-    ,"Comments":"Assay of urea nitrogen"
-    },
   "84525": {
      "CPT":"84525"
     ,"Cost":3.95
@@ -3196,12 +2911,7 @@
     },
   "84550": {
      "CPT":"84550"
-    ,"Cost":6.20
-    ,"Comments":"Assay of blood/uric acid"
-    },
-  "84550": {
-     "CPT":"84550"
-    ,"Cost":6.20
+    ,"Cost":6.2
     ,"Comments":"Assay of blood/uric acid"
     },
   "84560": {
@@ -3226,7 +2936,7 @@
     },
   "84583": {
      "CPT":"84583"
-    ,"Cost":6.90
+    ,"Cost":6.9
     ,"Comments":"Assay of urine urobilinogen"
     },
   "84585": {
@@ -3281,13 +2991,8 @@
     },
   "84702": {
      "CPT":"84702"
-    ,"Cost":19.90
+    ,"Cost":19.9
     ,"Comments":"Chorionic gonadotropin test"
-    },
-  "84703": {
-     "CPT":"84703"
-    ,"Cost":10.32
-    ,"Comments":"Chorionic gonadotropin assay"
     },
   "84703": {
      "CPT":"84703"
@@ -3296,7 +3001,7 @@
     },
   "84704": {
      "CPT":"84704"
-    ,"Cost":19.90
+    ,"Cost":19.9
     ,"Comments":"Hcg free betachain test"
     },
   "84830": {
@@ -3338,16 +3043,6 @@
      "CPT":"85014"
     ,"Cost":3.25
     ,"Comments":"Hematocrit"
-    },
-  "85014": {
-     "CPT":"85014"
-    ,"Cost":3.25
-    ,"Comments":"Hematocrit"
-    },
-  "85018": {
-     "CPT":"85018"
-    ,"Cost":3.25
-    ,"Comments":"Hemoglobin"
     },
   "85018": {
      "CPT":"85018"
@@ -3536,7 +3231,7 @@
     },
   "85337": {
      "CPT":"85337"
-    ,"Cost":14.30
+    ,"Cost":14.3
     ,"Comments":"Thrombomodulin"
     },
   "85345": {
@@ -3601,7 +3296,7 @@
     },
   "85390": {
      "CPT":"85390"
-    ,"Cost":7.10
+    ,"Cost":7.1
     ,"Comments":"Fibrinolysins screen i&r"
     },
   "85397": {
@@ -3646,7 +3341,7 @@
     },
   "85461": {
      "CPT":"85461"
-    ,"Cost":9.10
+    ,"Cost":9.1
     ,"Comments":"Hemoglobin fetal"
     },
   "85475": {
@@ -3676,12 +3371,12 @@
     },
   "85540": {
      "CPT":"85540"
-    ,"Cost":11.80
+    ,"Cost":11.8
     ,"Comments":"Wbc alkaline phosphatase"
     },
   "85547": {
      "CPT":"85547"
-    ,"Cost":11.80
+    ,"Cost":11.8
     ,"Comments":"RBC mechanical fragility"
     },
   "85549": {
@@ -3704,11 +3399,6 @@
     ,"Cost":29.47
     ,"Comments":"Blood platelet aggregation"
     },
-  "85576": {
-     "CPT":"85576"
-    ,"Cost":29.47
-    ,"Comments":"Blood platelet aggregation"
-    },
   "85597": {
      "CPT":"85597"
     ,"Cost":24.66
@@ -3718,11 +3408,6 @@
      "CPT":"85598"
     ,"Cost":24.66
     ,"Comments":"Hexagnal phosph pltlt neutrl"
-    },
-  "85610": {
-     "CPT":"85610"
-    ,"Cost":5.39
-    ,"Comments":"Prothrombin time"
     },
   "85610": {
      "CPT":"85610"
@@ -3746,7 +3431,7 @@
     },
   "85635": {
      "CPT":"85635"
-    ,"Cost":9.60
+    ,"Cost":9.6
     ,"Comments":"Reptilase test"
     },
   "85651": {
@@ -3756,7 +3441,7 @@
     },
   "85652": {
      "CPT":"85652"
-    ,"Cost":3.70
+    ,"Cost":3.7
     ,"Comments":"Rbc sed rate automated"
     },
   "85660": {
@@ -3786,7 +3471,7 @@
     },
   "85732": {
      "CPT":"85732"
-    ,"Cost":8.80
+    ,"Cost":8.8
     ,"Comments":"Thromboplastin time partial"
     },
   "85810": {
@@ -3846,7 +3531,7 @@
     },
   "86140": {
      "CPT":"86140"
-    ,"Cost":7.10
+    ,"Cost":7.1
     ,"Comments":"C-reactive protein"
     },
   "86141": {
@@ -3936,7 +3621,7 @@
     },
   "86235": {
      "CPT":"86235"
-    ,"Cost":24.60
+    ,"Cost":24.6
     ,"Comments":"Nuclear antigen antibody"
     },
   "86243": {
@@ -3969,11 +3654,6 @@
     ,"Cost":16.88
     ,"Comments":"Immunoassay tumor qual"
     },
-  "86294": {
-     "CPT":"86294"
-    ,"Cost":16.88
-    ,"Comments":"Immunoassay tumor qual"
-    },
   "86300": {
      "CPT":"86300"
     ,"Cost":28.55
@@ -3996,12 +3676,7 @@
     },
   "86308": {
      "CPT":"86308"
-    ,"Cost":7.10
-    ,"Comments":"Heterophile antibody screen"
-    },
-  "86308": {
-     "CPT":"86308"
-    ,"Cost":7.10
+    ,"Cost":7.1
     ,"Comments":"Heterophile antibody screen"
     },
   "86309": {
@@ -4022,11 +3697,6 @@
   "86317": {
      "CPT":"86317"
     ,"Cost":20.56
-    ,"Comments":"Immunoassay infectious agent"
-    },
-  "86318": {
-     "CPT":"86318"
-    ,"Cost":17.76
     ,"Comments":"Immunoassay infectious agent"
     },
   "86318": {
@@ -4156,18 +3826,13 @@
     },
   "86382": {
      "CPT":"86382"
-    ,"Cost":23.20
+    ,"Cost":23.2
     ,"Comments":"Neutralization test viral"
     },
   "86384": {
      "CPT":"86384"
     ,"Cost":15.62
     ,"Comments":"Nitroblue tetrazolium dye"
-    },
-  "86386": {
-     "CPT":"86386"
-    ,"Cost":21.91
-    ,"Comments":"Nuclear matrix protein 22"
     },
   "86386": {
      "CPT":"86386"
@@ -4246,7 +3911,7 @@
     },
   "86612": {
      "CPT":"86612"
-    ,"Cost":17.70
+    ,"Cost":17.7
     ,"Comments":"Blastomyces antibody"
     },
   "86615": {
@@ -4264,11 +3929,6 @@
     ,"Cost":23.36
     ,"Comments":"Lyme disease antibody"
     },
-  "86618": {
-     "CPT":"86618"
-    ,"Cost":23.36
-    ,"Comments":"Lyme disease antibody"
-    },
   "86622": {
      "CPT":"86622"
     ,"Cost":11.22
@@ -4276,7 +3936,7 @@
     },
   "86625": {
      "CPT":"86625"
-    ,"Cost":18.00
+    ,"Cost":18
     ,"Comments":"Campylobacter antibody"
     },
   "86628": {
@@ -4291,7 +3951,7 @@
     },
   "86632": {
      "CPT":"86632"
-    ,"Cost":17.40
+    ,"Cost":17.4
     ,"Comments":"Chlamydia igm antibody"
     },
   "86635": {
@@ -4351,7 +4011,7 @@
     },
   "86663": {
      "CPT":"86663"
-    ,"Cost":18.00
+    ,"Cost":18
     ,"Comments":"Epstein-barr antibody"
     },
   "86664": {
@@ -4386,7 +4046,7 @@
     },
   "86677": {
      "CPT":"86677"
-    ,"Cost":19.90
+    ,"Cost":19.9
     ,"Comments":"Helicobacter pylori antibody"
     },
   "86682": {
@@ -4444,11 +4104,6 @@
     ,"Cost":12.19
     ,"Comments":"Hiv-1antibody"
     },
-  "86701": {
-     "CPT":"86701"
-    ,"Cost":12.19
-    ,"Comments":"Hiv-1antibody"
-    },
   "86702": {
      "CPT":"86702"
     ,"Cost":14.49
@@ -4456,7 +4111,7 @@
     },
   "86703": {
      "CPT":"86703"
-    ,"Cost":18.80
+    ,"Cost":18.8
     ,"Comments":"Hiv-1/hiv-2 1 result antbdy"
     },
   "86704": {
@@ -4501,7 +4156,7 @@
     },
   "86717": {
      "CPT":"86717"
-    ,"Cost":16.80
+    ,"Cost":16.8
     ,"Comments":"Leishmania antibody"
     },
   "86720": {
@@ -4531,7 +4186,7 @@
     },
   "86735": {
      "CPT":"86735"
-    ,"Cost":17.90
+    ,"Cost":17.9
     ,"Comments":"Mumps antibody"
     },
   "86738": {
@@ -4601,7 +4256,7 @@
     },
   "86774": {
      "CPT":"86774"
-    ,"Cost":20.30
+    ,"Cost":20.3
     ,"Comments":"Tetanus antibody"
     },
   "86777": {
@@ -4613,11 +4268,6 @@
      "CPT":"86778"
     ,"Cost":19.76
     ,"Comments":"Toxoplasma antibody igm"
-    },
-  "86780": {
-     "CPT":"86780"
-    ,"Cost":18.16
-    ,"Comments":"Treponema pallidum"
     },
   "86780": {
      "CPT":"86780"
@@ -4651,18 +4301,13 @@
     },
   "86793": {
      "CPT":"86793"
-    ,"Cost":11.90
+    ,"Cost":11.9
     ,"Comments":"Yersinia antibody"
     },
   "86800": {
      "CPT":"86800"
     ,"Cost":21.82
     ,"Comments":"Thyroglobulin antibody"
-    },
-  "86803": {
-     "CPT":"86803"
-    ,"Cost":19.57
-    ,"Comments":"Hepatitis c ab test"
     },
   "86803": {
      "CPT":"86803"
@@ -4696,7 +4341,7 @@
     },
   "86812": {
      "CPT":"86812"
-    ,"Cost":35.40
+    ,"Cost":35.4
     ,"Comments":"Hla typing a b or c"
     },
   "86816": {
@@ -4786,17 +4431,17 @@
     },
   "86886": {
      "CPT":"86886"
-    ,"Cost":7.10
+    ,"Cost":7.1
     ,"Comments":"Coombs test indirect titer"
     },
   "86900": {
      "CPT":"86900"
-    ,"Cost":4.10
+    ,"Cost":4.1
     ,"Comments":"Blood typing abo"
     },
   "86901": {
      "CPT":"86901"
-    ,"Cost":4.10
+    ,"Cost":4.1
     ,"Comments":"Blood typing rh (d)"
     },
   "86902": {
@@ -4831,7 +4476,7 @@
     },
   "87003": {
      "CPT":"87003"
-    ,"Cost":23.10
+    ,"Cost":23.1
     ,"Comments":"Small animal inoculation"
     },
   "87015": {
@@ -4876,22 +4521,17 @@
     },
   "87076": {
      "CPT":"87076"
-    ,"Cost":8.80
+    ,"Cost":8.8
     ,"Comments":"Culture anaerobe ident each"
     },
   "87077": {
      "CPT":"87077"
-    ,"Cost":8.80
-    ,"Comments":"Culture aerobic identify"
-    },
-  "87077": {
-     "CPT":"87077"
-    ,"Cost":8.80
+    ,"Cost":8.8
     ,"Comments":"Culture aerobic identify"
     },
   "87081": {
      "CPT":"87081"
-    ,"Cost":8.80
+    ,"Cost":8.8
     ,"Comments":"Culture screen only"
     },
   "87084": {
@@ -4906,7 +4546,7 @@
     },
   "87088": {
      "CPT":"87088"
-    ,"Cost":11.10
+    ,"Cost":11.1
     ,"Comments":"Urine bacteria culture"
     },
   "87101": {
@@ -4956,12 +4596,12 @@
     },
   "87143": {
      "CPT":"87143"
-    ,"Cost":9.60
+    ,"Cost":9.6
     ,"Comments":"Culture typing glc/hplc"
     },
   "87147": {
      "CPT":"87147"
-    ,"Cost":7.10
+    ,"Cost":7.1
     ,"Comments":"Culture type immunologic"
     },
   "87149": {
@@ -4996,7 +4636,7 @@
     },
   "87166": {
      "CPT":"87166"
-    ,"Cost":15.50
+    ,"Cost":15.5
     ,"Comments":"Dark field examination"
     },
   "87168": {
@@ -5083,11 +4723,6 @@
      "CPT":"87209"
     ,"Cost":24.66
     ,"Comments":"Smear complex stain"
-    },
-  "87210": {
-     "CPT":"87210"
-    ,"Cost":5.86
-    ,"Comments":"Smear wet mount saline/ink"
     },
   "87210": {
      "CPT":"87210"
@@ -5289,11 +4924,6 @@
     ,"Cost":15.09
     ,"Comments":"Hpylori stool eia"
     },
-  "87338": {
-     "CPT":"87338"
-    ,"Cost":15.09
-    ,"Comments":"Hpylori stool ia"
-    },
   "87339": {
      "CPT":"87339"
     ,"Cost":15.09
@@ -5329,19 +4959,14 @@
     ,"Cost":33.03
     ,"Comments":"Hiv-1 ag w/hiv-1 & hiv-2 ab"
     },
-  "87389": {
-     "CPT":"87389"
-    ,"Cost":33.03
-    ,"Comments":"Hiv-1 ag w/hiv-1 & hiv-2 ab"
-    },
   "87390": {
      "CPT":"87390"
-    ,"Cost":24.20
+    ,"Cost":24.2
     ,"Comments":"Hiv-1 ag eia"
     },
   "87391": {
      "CPT":"87391"
-    ,"Cost":24.20
+    ,"Cost":24.2
     ,"Comments":"Hiv-2 ag eia"
     },
   "87420": {
@@ -5363,11 +4988,6 @@
      "CPT":"87430"
     ,"Cost":15.09
     ,"Comments":"Strep a ag eia"
-    },
-  "87449": {
-     "CPT":"87449"
-    ,"Cost":15.09
-    ,"Comments":"Ag detect nos eia mult"
     },
   "87449": {
      "CPT":"87449"
@@ -5498,11 +5118,6 @@
      "CPT":"87501"
     ,"Cost":70.39
     ,"Comments":"Influenza dna amp prob 1+"
-    },
-  "87502": {
-     "CPT":"87502"
-    ,"Cost":116.73
-    ,"Comments":"Influenza dna amp probe"
     },
   "87502": {
      "CPT":"87502"
@@ -5754,11 +5369,6 @@
     ,"Cost":175.98
     ,"Comments":"Resp virus 3-11 targets"
     },
-  "87631": {
-     "CPT":"87631"
-    ,"Cost":175.98
-    ,"Comments":"Resp virus 3-5 targets"
-    },
   "87632": {
      "CPT":"87632"
     ,"Cost":292.77
@@ -5778,16 +5388,6 @@
      "CPT":"87650"
     ,"Cost":27.51
     ,"Comments":"Strep a dna dir probe"
-    },
-  "87650": {
-     "CPT":"87650"
-    ,"Cost":27.51
-    ,"Comments":"Strep a dna dir probe"
-    },
-  "87651": {
-     "CPT":"87651"
-    ,"Cost":48.14
-    ,"Comments":"Strep a dna amp probe"
     },
   "87651": {
      "CPT":"87651"
@@ -5854,16 +5454,6 @@
     ,"Cost":15.09
     ,"Comments":"Influenza assay w/optic"
     },
-  "87804": {
-     "CPT":"87804"
-    ,"Cost":15.09
-    ,"Comments":"Influenza assay w/optic"
-    },
-  "87806": {
-     "CPT":"87806"
-    ,"Cost":33.03
-    ,"Comments":"Hiv antigen w/hiv antibodies"
-    },
   "87806": {
      "CPT":"87806"
     ,"Cost":33.03
@@ -5874,25 +5464,10 @@
     ,"Cost":15.09
     ,"Comments":"Rsv assay w/optic"
     },
-  "87807": {
-     "CPT":"87807"
-    ,"Cost":15.09
-    ,"Comments":"Rsv assay w/optic"
-    },
   "87808": {
      "CPT":"87808"
     ,"Cost":15.09
     ,"Comments":"Trichomonas assay w/optic"
-    },
-  "87808": {
-     "CPT":"87808"
-    ,"Cost":15.09
-    ,"Comments":"Trichomonas assay w/optic"
-    },
-  "87809": {
-     "CPT":"87809"
-    ,"Cost":15.09
-    ,"Comments":"Adenovirus assay w/optic"
     },
   "87809": {
      "CPT":"87809"
@@ -5914,16 +5489,6 @@
     ,"Cost":15.09
     ,"Comments":"Strep a assay w/optic"
     },
-  "87880": {
-     "CPT":"87880"
-    ,"Cost":15.09
-    ,"Comments":"Strep a assay w/optic"
-    },
-  "87899": {
-     "CPT":"87899"
-    ,"Cost":15.09
-    ,"Comments":"Agent nos assay w/optic"
-    },
   "87899": {
      "CPT":"87899"
     ,"Cost":15.09
@@ -5931,7 +5496,7 @@
     },
   "87900": {
      "CPT":"87900"
-    ,"Cost":178.80
+    ,"Cost":178.8
     ,"Comments":"Phenotype infect agent drug"
     },
   "87901": {
@@ -5953,11 +5518,6 @@
      "CPT":"87904"
     ,"Cost":35.76
     ,"Comments":"Phenotype dna hiv w/clt add"
-    },
-  "87905": {
-     "CPT":"87905"
-    ,"Cost":16.76
-    ,"Comments":"Sialidase enzyme assay"
     },
   "87905": {
      "CPT":"87905"
@@ -5988,11 +5548,6 @@
      "CPT":"88140"
     ,"Cost":10.96
     ,"Comments":"Sex chromatin identification"
-    },
-  "88153": {
-     "CPT":"88153"
-    ,"Cost":27.79
-    ,"Comments":"Cytopath c/v thin layer redo"
     },
   "88147": {
      "CPT":"88147"
@@ -6061,7 +5616,7 @@
     },
   "88230": {
      "CPT":"88230"
-    ,"Cost":159.80
+    ,"Cost":159.8
     ,"Comments":"Tissue culture lymphocyte"
     },
   "88233": {
@@ -6096,7 +5651,7 @@
     },
   "88245": {
      "CPT":"88245"
-    ,"Cost":204.20
+    ,"Cost":204.2
     ,"Comments":"Chromosome analysis 20-25"
     },
   "88248": {
@@ -6171,7 +5726,7 @@
     },
   "88283": {
      "CPT":"88283"
-    ,"Cost":94.10
+    ,"Cost":94.1
     ,"Comments":"Chromosome banding study"
     },
   "88285": {
@@ -6191,7 +5746,7 @@
     },
   "88372": {
      "CPT":"88372"
-    ,"Cost":31.20
+    ,"Cost":31.2
     ,"Comments":"Protein analysis w/probe"
     },
   "88720": {
@@ -6249,11 +5804,6 @@
     ,"Cost":12.25
     ,"Comments":"Semen analysis w/huhner"
     },
-  "89300": {
-     "CPT":"89300"
-    ,"Cost":12.25
-    ,"Comments":"Semen analysis w/huhner"
-    },
   "89310": {
      "CPT":"89310"
     ,"Cost":11.81
@@ -6263,11 +5813,6 @@
      "CPT":"89320"
     ,"Cost":16.53
     ,"Comments":"Semen anal vol/count/mot"
-    },
-  "89321": {
-     "CPT":"89321"
-    ,"Cost":16.53
-    ,"Comments":"Semen anal sperm detection"
     },
   "89321": {
      "CPT":"89321"
@@ -6331,7 +5876,7 @@
     },
   "ATP08": {
      "CPT":"ATP08"
-    ,"Cost":11.60
+    ,"Cost":11.6
     ,"Comments":"Auto.Test Panel Pricing Code, 8 Tests"
     },
   "ATP09": {
@@ -6361,7 +5906,7 @@
     },
   "ATP18": {
      "CPT":"ATP18"
-    ,"Cost":14.60
+    ,"Cost":14.6
     ,"Comments":"Auto Test Panel Pricing Code, 17-18 Test"
     },
   "ATP19": {
@@ -6439,24 +5984,14 @@
     ,"Cost":21.82
     ,"Comments":"Fecal blood scrn immunoassay"
     },
-  "G0328": {
-     "CPT":"G0328"
-    ,"Cost":21.82
-    ,"Comments":"Fecal blood scrn immunoassay"
-    },
   "G0432": {
      "CPT":"G0432"
-    ,"Cost":18.80
+    ,"Cost":18.8
     ,"Comments":"EIA HIV-1/HIV-2 screen"
     },
   "G0433": {
      "CPT":"G0433"
-    ,"Cost":18.80
-    ,"Comments":"ELISA HIV-1/HIV-2 screen"
-    },
-  "G0433": {
-     "CPT":"G0433"
-    ,"Cost":18.80
+    ,"Cost":18.8
     ,"Comments":"ELISA HIV-1/HIV-2 screen"
     },
   "G0435": {
@@ -6466,13 +6001,8 @@
     },
   "G0471": {
      "CPT":"G0471"
-    ,"Cost":5.00
+    ,"Cost":5
     ,"Comments":"Ven blood coll SNF/HHA"
-    },
-  "G0472": {
-     "CPT":"G0472"
-    ,"Cost":19.57
-    ,"Comments":"Hep c screen high risk/other"
     },
   "G0472": {
      "CPT":"G0472"
@@ -6521,7 +6051,7 @@
     },
   "P2038": {
      "CPT":"P2038"
-    ,"Cost":6.90
+    ,"Cost":6.9
     ,"Comments":"Blood mucoprotein"
     },
   "P3000": {
@@ -6531,12 +6061,12 @@
     },
   "P9612": {
      "CPT":"P9612"
-    ,"Cost":3.00
+    ,"Cost":3
     ,"Comments":"Catheterize for urine spec"
     },
   "P9615": {
      "CPT":"P9615"
-    ,"Cost":3.00
+    ,"Cost":3
     ,"Comments":"Urine specimen collect mult"
     },
   "Q0111": {
