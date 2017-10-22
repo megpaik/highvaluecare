@@ -168,10 +168,6 @@ $("#searchtop").keyup(function(event){
 
 // Changes the page displayed
 $('#seelist').click(changePage);
-$('#seelist').hover(
-    function() { $(this).css("font-style", "italic"); },
-    function() { $(this).css("font-style", "normal"); }
-);
 
 // Back to main page
 $('#back1').click(changePage);

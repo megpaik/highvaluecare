@@ -56,6 +56,11 @@ input[type="text"] {
     font-size: 1.2em;
 }
 
+#seelist:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
 /* Wrap directory in flexbox */
 #directory {
     display: flex inherit;
@@ -67,6 +72,10 @@ input[type="text"] {
     width: auto;
     top: 0px;
     left: 0px;
+}
+
+#back1, #back2, #submit, #newsearch:hover {
+    cursor: pointer;
 }
 
 #back2 {
@@ -105,6 +114,7 @@ input[type="text"] {
 
 .item:hover {
     font-weight: bold;
+    cursor: pointer;
 }
 
 #results {
