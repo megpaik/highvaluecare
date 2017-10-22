@@ -73,17 +73,24 @@ var loadAndDelegate = function(html, hostName) {
 // Helper - Takes an array of costedObjs and writes the file
 var writeCosts = function (costedObjs) {
 
-  allCosts = {}
-  for (var o in costedObjs) {
-    var curr = {}
-    if (allCosts[costedObjs[o].cpt] != undefined) {
-      curr = allCosts[costedObjs[o].cpt]
+  // For each study, add the costs if we have one for them
+  for (i in existingObjs) {
+    var el = existingObjs[i];
+    for (var j in costedObjs) {
+      var costObj = costedObjs[j];
+      if (costObj.cpt == el.CPT) {
+        var host = costObj.hostName;
+        el.Costs[host] = costObj.cost;
+      }
     }
-    curr[costedObjs[o].hostName] = costedObjs[o].cost
-    allCosts[costedObjs[o].cpt] = curr
+
+    var sum = 0;
+    for (var k in el.Costs) sum += el.Costs[k];
+    el.Cost = sum / Object.keys(el.Costs).length;
   }
 
-  fs.writeFile('./data/output.json', JSON.stringify(allCosts), (err) => {
+
+  fs.writeFile('./data/medicalStudies4.json', JSON.stringify(existingObjs), (err) => {
     if (err) console.log(err);
     else console.log('File  written!');
   })
@@ -181,15 +188,19 @@ var id2Objs = function (CPTs, callback) {
 /*                    MAIN BODY                   */
 /* ---------------------------------------------- */
 
-// here's my test case
-//var ids = [70551, 80048, 80061, 74000, 84075]
+// Global variable for writeCosts to use
+var existingObjs;
 
-fs.readFile('./data/cpts.csv', 'utf8', function (err, data) {
-  // Split up the CPTs into an array of 5 digit strings
-  var ids = data.split(/\r|\n/);
+fs.readFile('./data/medicalStudies3.json', 'utf8', function (err, data) {
+  existingObjs = JSON.parse(data);
+  fs.readFile('./data/cpts.csv', 'utf8', function (err, cptData) {
+    // Split up the CPTs into an array of 5 digit strings
+    var ids = cptData.split(/\r|\n/);
 
-  id2Objs(ids, scrapeThemAll);
-});
+    id2Objs(ids, scrapeThemAll);
+  });
+})
+
 
 
 // // what to do when we visit '/scrape'

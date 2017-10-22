@@ -4,7 +4,7 @@ var studies = {};
 var tableheadings = ['CPT', 'Intended Diagnosis', 'Sensitivity', 'Specificity', 'PPV', 'NPV', 'Cost'];
 
 // Read from JSON file (on server) and take those results
-var readStudiesReq = $.getJSON( "https://raw.githubusercontent.com/megpaik/pennapps/master/data/testStudies.json", (json) => {
+var readStudiesReq = $.getJSON( "https://raw.githubusercontent.com/megpaik/pennapps/master/data/medicalStudies4.json", (json) => {
   studies = alphabetize(clean(json));
   listfill(studies);
 });
@@ -141,8 +141,8 @@ var searchMatch = function (keyword, study) {
 $('#submit').click(function() {
     var task = document.querySelector("input[type=text]")
     var input = task.value.toLowerCase().trim();
-    if (input === "") return; 
-    document.getElementById("searchtop").value = input;    
+    if (input === "") return;
+    document.getElementById("searchtop").value = input;
     searchEvent(input);
 });
 
@@ -157,7 +157,7 @@ $('#newsearch').click(function() {
   var task = document.querySelector("#searchtop");
   var input = task.value.toLowerCase().trim();
   if (input === "") return;
-  searchEvent(input); 
+  searchEvent(input);
 });
 
 $("#searchtop").keyup(function(event){
