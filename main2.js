@@ -4,7 +4,7 @@ var studies = {};
 var tableheadings = ['CPT', 'Intended Diagnosis', 'Sensitivity', 'Specificity', 'PPV', 'NPV', 'Cost'];
 
 // Read from JSON file (on server) and take those results
-var readStudiesReq = $.getJSON( "https://raw.githubusercontent.com/megpaik/pennapps/master/testStudies.json", (json) => {
+var readStudiesReq = $.getJSON( "https://raw.githubusercontent.com/megpaik/pennapps/master/data/testStudies.json", (json) => {
   studies = alphabetize(clean(json));
   listfill(studies);
 });

@@ -125,6 +125,8 @@ input[type="text"] {
 #resulthead {
     display: flex;
     justify-content: center;
+    height: 3.8em;
+    margin: 2em;
 }
 
 #newsearch{
@@ -132,17 +134,13 @@ input[type="text"] {
     width: auto;
     background-color: white;
     background-image: -moz-linear-gradient();
-    margin-top: 2em;
 }
 
 #searchtop {
     width: 15em;
-    height: 0.6em;
+    /* height: 0.6em; */
     border: none;
     opacity: 0.7;
-    margin-top: 0.5em;
-    margin-left: 4em;
-    margin-bottom: 0.5em;
 }
 
 #resultlist {
