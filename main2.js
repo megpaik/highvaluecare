@@ -30,11 +30,11 @@ var clean = function (obj) {
   return modifiedEntries;
 }
 
-// Helpter 2 - alphabetizes properties of studies by removing and adding them
+// Helper 2 - alphabetizes properties of studies by removing and adding them
 var alphabetize = function(studies, expected) {
   var keys = Object.keys(studies).sort(function keyOrder(k1, k2) {
-      if (k1 < k2) return -1;
-      else if (k1 > k2) return +1;
+      if (studies[k1].name.toLowerCase() < studies[k2].name.toLowerCase()) return -1;
+      else if (studies[k1].name.toLowerCase() > studies[k2].name.toLowerCase()) return +1;
       else return 0;
   });
 
@@ -134,7 +134,10 @@ var searchEvent = function(keyword) {
 
 // Helper 4 - string matching
 var searchMatch = function (keyword, study) {
-  return (study.ID.indexOf(keyword) >= 0 );
+  return (study.CPT.indexOf(keyword) >= 0 ||
+          study.name.indexOf(keyword) >= 0 ||
+          study["Intended Diagnosis"].indexOf(keyword) >= 0 ||
+          study.Tags.indexOf(keyword) >= 0);
 }
 
 // Search functionality
