@@ -16,9 +16,9 @@ fs.readFile("./data/medicalStudies2.json", 'utf8', (err, data) => {
     if (err) throw new Error('medicalStudies not parsed');
     data = jsonEscape(data);
     studies = JSON.parse(data);
-    for (var study in studies) {
-        match(studies[study]);
-    };
+    for (var i = 0; i < studies.length; i++) {
+        match(studies[i]);
+    }
     fs.writeFile("./data/medicalStudies3.json", JSON.stringify(studies), (err) => {
         if (err) throw err;
         console.log('done');
