@@ -10,7 +10,6 @@ app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-
 /* ---------------------------------------------- */
 //               OBJs to (OBJs + cost)            */
 /* ---------------------------------------------- */
@@ -19,8 +18,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 var scrapeThemAll = function(studyObjs) {
   allPromises = []
   for (var idx in studyObjs) {
-    if (studyObjs[idx].url == '') continue;
-    console.log(studyObjs[idx].url);
     allPromises.push(
       getHTML(studyObjs[idx])
       .then(getCost))
@@ -35,6 +32,7 @@ var getHTML = function (obj) {
   return new Promise((resolve, reject) => {
     request(obj.url, function (error, response, html) {
       var output = {html: html, cpt: obj.cpt, hostName: obj.hostName}
+
       if (error) reject(error)
       else resolve(output)
     })
@@ -85,7 +83,7 @@ var writeCosts = function (costedObjs) {
     allCosts[costedObjs[o].cpt] = curr
   }
 
-  fs.writeFile('output.json', JSON.stringify(allCosts), (err) => {
+  fs.writeFile('./data/output.json', JSON.stringify(allCosts), (err) => {
     if (err) console.log(err);
     else console.log('File  written!');
   })
@@ -150,50 +148,34 @@ var NCHreq = function($) {
 /*               CPT to URL GENERATORS            */
 /* ---------------------------------------------- */
 
-var genHCBB = function(cpt) {
-  return new Promise((resolve, reject) => {
-    var initUrl = "https://healthcarebluebook.com/page_SearchResults.aspx?SearchTerms=" + cpt;
-    request(initUrl, function (error, response, html) {
-      var $ = cheerio.load(html);
-      var branch = $('#cphDefaultMaster_lblResultLeft');
-      if (branch.children('.physician').length == 0) {
-        resolve({cpt: cpt, url: '', hostName: 'HCBB'});
-      } else {
-        var href = branch.children('.service-name').children().attr('href');
-        var suffix = href.slice(href.indexOf('?'));
-        var url = "https://healthcarebluebook.com/page_ProcedureDetails.aspx" + suffix;
-        resolve({cpt: cpt, url: url, hostName: 'HCBB'});
-      }
-    });
-  });
-}
-
 var genCH = function (cpt) {
-  return new Promise((resolve, reject) => {
     var url = "https://clearhealthcosts.com/search/?query=" + cpt +
-    "&zip_code=19019&radius=2500&no_zero=1&submit=";
-    resolve({cpt: cpt, url: url, hostName: 'CH'});
-  });
+    "&zip_code=19019&radius=5000&no_zero=1";
+    return {cpt: cpt, url: url, hostName: 'CH'};
 }
 
 /* ---------------------------------------------- */
 /*                  CPTs TO OBJS                  */
 /* ---------------------------------------------- */
 
-// Takes in array of IDs, returns [] of objects {cpt, url, hostName}
-var id2Objs = function (CPTs) {
-  return new Promise((resolve, reject) => {
-    var allPromises = [];
+// Takes in cpt[], returns [] of objects {cpt, url, hostName} to be searched
+var id2Objs = function (CPTs, callback) {
+  var toSearch = [];
+  // CH
+  for (var idx in CPTs) {
+    cpt = CPTs[idx];
+    toSearch.push(genCH(cpt));
+  }
 
-    for (var idx in CPTs) {
-      cpt = CPTs[idx];
-      allPromises.push(genCH(cpt));
-      allPromises.push(genHCBB(cpt));
+  // HCBB
+  fs.readFile('./data/hcbburls.json', 'utf8', function (err, data) {
+    var input = JSON.parse(data);
+    for (idx in input) {
+      toSearch.push(input[idx]);
     }
-
-    Promise.all(allPromises).then(resolve);
+    callback(toSearch);
   });
-};
+}
 
 /* ---------------------------------------------- */
 /*                    MAIN BODY                   */
@@ -202,12 +184,12 @@ var id2Objs = function (CPTs) {
 // here's my test case
 //var ids = [70551, 80048, 80061, 74000, 84075]
 
-fs.readFile('cpts.csv', 'utf8', function (err, data) {
-  var dataArray = data.split(/\r|\n/);
-  var ids = dataArray;
-  // werk
-  var costedObjs = id2Objs(ids).then(scrapeThemAll);
-})
+fs.readFile('./data/cpts.csv', 'utf8', function (err, data) {
+  // Split up the CPTs into an array of 5 digit strings
+  var ids = data.split(/\r|\n/);
+
+  id2Objs(ids, scrapeThemAll);
+});
 
 
 // // what to do when we visit '/scrape'

@@ -8,7 +8,6 @@ PA and Lateral Chest Xray:
     Specificity:                0.93
     PPV:                        6.214285714
     NPV:                        0.607526882
-    Cost:                       1.00
     comments:                   {1: 'CT scan as gold standard, all CXR included'}
     references:                 {1: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3556231/'}
   }
@@ -27,7 +26,8 @@ PA and Lateral Chest Xray:
       Specificity:                0.93
       PPV:                        6.214285714
       NPV:                        0.607526882
-      Cost:                       1.00
+      Cost:                       {'HCBB': 1.00, 'CH': 2.00, 'CMS': 3.00}
+      AvgCost:                    2
       comments:                   {1: 'CT scan as gold standard, all CXR included'}
       references:                 {1: 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3556231/'}
     }
