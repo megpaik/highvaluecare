@@ -11,7 +11,7 @@ fs.readFile('./data/medicalStudies.json', "utf8", function (err, data) {
   }
 
   var input = JSON.parse(jsonEscape(data));
-  var output = {}
+  var output = []
   for (idx in input) {
     if (!input.hasOwnProperty(idx)) continue;
 
@@ -34,7 +34,7 @@ fs.readFile('./data/medicalStudies.json', "utf8", function (err, data) {
     delete el.URL2;
     delete el.URL3;
 
-    output[el.name] = el
+    output.push(el);
   }
 
   fs.writeFile('./data/medicalStudies2.json', JSON.stringify(output), function (err) {
