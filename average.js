@@ -27,13 +27,10 @@ fs.readFile("./data/medicalStudies2.json", 'utf8', (err, data) => {
 
 var match = function (study) {
     var cpt = study.CPT;
+    if (!study.Costs) study.Costs = {};
     for (var key in labfees) {
         if (labfees.hasOwnProperty(cpt)) {
-            if (study.Costs) {
-                study.Costs.CMS = labfees[cpt].Cost;
-            } else {
-                study.Costs = {CMS : labfees[cpt].Cost};
-            }
+            study.Costs.CMS = labfees[cpt].Cost;
         }
     }
 };
