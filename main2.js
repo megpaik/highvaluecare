@@ -140,7 +140,8 @@ var searchMatch = function (keyword, study) {
 // Search functionality
 $('#submit').click(function() {
     var task = document.querySelector("input[type=text]")
-    var input = task.value.toLowerCase();
+    var input = task.value.toLowerCase().trim();
+    if (input === "") return; 
     document.getElementById("searchtop").value = input;    
     searchEvent(input);
 });
@@ -154,8 +155,9 @@ $("#searchbar").keyup(function(event){
 // searching from the results page
 $('#newsearch').click(function() {
   var task = document.querySelector("#searchtop");
-  var input = task.value.toLowerCase();
-  searchEvent(input);
+  var input = task.value.toLowerCase().trim();
+  if (input === "") return;
+  searchEvent(input); 
 });
 
 $("#searchtop").keyup(function(event){

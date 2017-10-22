@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>highvalue.care</title>
+  <!-- Style Sheet -->
+  <link href='formstyle.css' type="text/css" rel='stylesheet' />
+</head>
+
+<body>
+  <!-- This is the container for the main page -->
+  <div id="container" class="main active">
+    <div id="header">Add New Entry</div>
+
+    <!-- Form -->
+    <!-- <form id="form" action="confirmation.html" method="post"> -->
+
+    <div id="fields">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div>
+        <label for="CPT">CPT:</label>
+        <input type="text" id="CPT" name="cpt">
+      </div>
+      <div>
+        <label for="diagnosis">Intended Diagnosis:</label>
+        <input type="text" id="Intended Diagnosis" name="diagnosis">
+      </div>
+      <div>
+        <label for="sensitivity">Sensitivity:</label>
+        <input type="text" id="Sensitivity" name="sensitivity">
+      </div>
+      <div>
+        <label for="Specificity">Specificity:</label>
+        <input type="text" id="Specificity" name="specificity">
+      </div>
+      <div>
+        <label for="PPV">PPV:</label>
+        <input type="text" id="PPV" name="PPV">
+      </div>
+      <div>
+        <label for="NPV">NPV:</label>
+        <input type="text" id="NPV" name="NPV">
+      </div>
+      <div>
+        <label for="Comment">Comment:</label>
+        <input type="text" id="comments" name="comments">
+      </div>
+      <div>
+          <label for="References">Comment:</label>
+          <input type="text" id="references" name="references">
+        </div>
+      <button class="button" id="submit">Submit</div>
+    </div>
+  </div>
+
+  <!-- THIS IS THE CONFIRMATION PAGE -->
+  <div class="main" id="confirm">
+    <div id="header">Please verify that all the information is correct.</div>
+    <div id="info"></div>
+    <div class="button">
+      <button id="confirm">Submit</button>
+      <button id="cancel">Go Back</div>
+    </div>
+  </div>
+
+  <!-- </form> -->
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="jquery-3.2.1.js"></script>
+  <script src='form.js'></script>
+</body>
+
+</html>

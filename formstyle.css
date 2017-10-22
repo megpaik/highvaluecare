@@ -1,0 +1,8 @@
+/* Styling Sheet for the data submit form */
+.main {
+    display: none;
+}
+
+.active {
+    display: inherit;
+}
