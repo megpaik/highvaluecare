@@ -6,9 +6,9 @@ var cheerio     = require('cheerio');
 var path        = require("path");
 var bodyParser  = require('body-parser');
 
-app.use(express.static(__dirname));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+// app.use(express.static(__dirname));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extended: false}));
 
 /* ---------------------------------------------- */
 //               OBJs to (OBJs + cost)            */
