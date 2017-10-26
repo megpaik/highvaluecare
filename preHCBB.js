@@ -12,7 +12,8 @@ var genHCBB = function (cpt) {
     var initUrl = "https://healthcarebluebook.com/page_SearchResults.aspx?SearchTerms=" + cpt;
     request(initUrl, function (error, response, html) {
       var $ = cheerio.load(html);
-      if ($('#cphDefaultMaster_lblResultLeft').find('.physician').length == 0) {
+      if ($('#cphDefaultMaster_lblResultLeft').find('.physician').length == 0 &&
+          $('#cphDefaultMaster_lblResultLeft').find('.labs').length == 0) {
         resolve({cpt: cpt, url: '', hostName: 'HCBB'});
       } else {
         var href = $('#cphDefaultMaster_lblResultLeft').find('.service-name').children().attr('href');
