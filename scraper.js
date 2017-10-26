@@ -85,8 +85,14 @@ var writeCosts = function (costedObjs) {
     }
 
     var sum = 0;
-    for (var k in el.Costs) sum += el.Costs[k];
-    el.Cost = sum / Object.keys(el.Costs).length;
+    var counter = 0;
+    for (var k in el.Costs) {
+      if (el.Costs.hasOwnProperty(k)) {
+        sum += el.Costs[k];
+        counter ++;
+      }
+    }
+    el.Cost = sum / counter;
   }
 
 
