@@ -78,7 +78,7 @@ var writeCosts = function (costedObjs) {
     var el = existingObjs[i];
     for (var j in costedObjs) {
       var costObj = costedObjs[j];
-      if (costObj.cpt == el.CPT) {
+      if (costObj.cpt == el.CPT && costObj.cost != null) {
         var host = costObj.hostName;
         el.Costs[host] = costObj.cost;
       }
@@ -87,14 +87,12 @@ var writeCosts = function (costedObjs) {
     var sum = 0;
     var counter = 0;
     for (var k in el.Costs) {
-      if (el.Costs.hasOwnProperty(k)) {
-        sum += el.Costs[k];
-        counter ++;
-      }
+      sum += el.Costs[k];
+      counter ++;
     }
     el.Cost = sum / counter;
+    existingObjs[i] = el;
   }
-
 
   fs.writeFile('./data/medicalStudies4.json', JSON.stringify(existingObjs), (err) => {
     if (err) console.log(err);
