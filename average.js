@@ -4,7 +4,7 @@ var jsonEscape = function (str) {
     return str.replace(/\r?\n|\r/g, "").replace(/^\uFEFF/, '');
 };
 
-var labfees, studies;
+var labfees;
 
 fs.readFile('CMSLabfees.json', 'utf8', (err, data) => {
     if (err) throw new Error('CMSLabfees not parsed');
@@ -15,7 +15,7 @@ fs.readFile('CMSLabfees.json', 'utf8', (err, data) => {
 fs.readFile("./data/medicalStudies2.json", 'utf8', (err, data) => {
     if (err) throw new Error('medicalStudies not parsed');
     data = jsonEscape(data);
-    studies = JSON.parse(data);
+    var studies = JSON.parse(data);
     for (var i = 0; i < studies.length; i++) {
         match(studies[i]);
     }
