@@ -6,11 +6,17 @@ import * as initialState from '../initialState.js';
 const mainReducer = (state, action) => {
   switch (action.type) {
   case 'ClICK_RIGHT':
-    let scroll = (state.scroll + 1) % state.basket.length;
+    let scroll = state.scroll;
+    scroll = (scroll < state.basket.length - 3) ?
+              (scroll + 1) % state.basket.length
+              : scroll;
     return _.assign({}, state, {scroll: scroll});
 
   case 'ClICK_LEFT':
-    let scroll = (state.scroll - 1 + state.basket.length) % state.basket.length;
+    let scroll = state.scroll;
+    scroll = (scroll > 0) ?
+              (state.scroll - 1 + state.basket.length) % state.basket.length
+              : scroll;
     return _.assign({}, state, {scroll: scroll});
 
   case 'CLEAR':
@@ -30,7 +36,7 @@ const mainReducer = (state, action) => {
     let scroll = state.scroll;
     if (idx != -1) {
       basket.splice(idx, 1);
-      if (idx < state.scroll) {
+      if (scroll + 3 > basket.length && scroll > 0) {
         scroll--;
       }
     }
