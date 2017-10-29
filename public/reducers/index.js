@@ -5,32 +5,32 @@ import * as initialState from '../initialState.js';
 
 const mainReducer = (state, action) => {
   switch (action.type) {
-  case 'ClICK_RIGHT':
+  case 'ClICK_RIGHT': {
     let scroll = state.scroll;
     scroll = (scroll < state.basket.length - 3) ?
               (scroll + 1) % state.basket.length
               : scroll;
     return _.assign({}, state, {scroll: scroll});
-
-  case 'ClICK_LEFT':
+  }
+  case 'ClICK_LEFT': {
     let scroll = state.scroll;
     scroll = (scroll > 0) ?
               (state.scroll - 1 + state.basket.length) % state.basket.length
               : scroll;
     return _.assign({}, state, {scroll: scroll});
-
+  }
   case 'CLEAR':
     return _.assign({}, state, {basket: [], scroll: 0});
 
   case 'SEARCH':
     return _.assign({}, state, {matches: returnMatches(query)});
 
-  case 'CHOOSE':
+  case 'CHOOSE': {
     let basket = state.basket;
     basket.unshift(action.query);
     return _.assign({}, state, {basket: basket});
-
-  case 'DELETE':
+  }
+  case 'DELETE': {
     let basket = state.basket;
     let idx = basket.indexOf(action.query);
     let scroll = state.scroll;
@@ -41,7 +41,7 @@ const mainReducer = (state, action) => {
       }
     }
     return _.assign({}, state, {basket: basket, scroll: scroll});
-
+  }
   case 'SEARCH_VIEW':
     return _.assign({}, state, {searchString: action.query})
   }

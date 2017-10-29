@@ -10,11 +10,11 @@ export default class ScrollArrows extends React.Component {
 
   onScroll() {
     const click = this.props.left ? actions.clickLeft : actions.clickRight;
-    this.props.store.dispatch(direction);
+    this.props.store.dispatch(click);
   }
 
   render() {
-    const direction = this.props.left ? "Left" : "Right"; 
+    const direction = this.props.left ? "Left" : "Right";
     return (
       <button className="arrow" onClick={this.onScroll}>{direction}</button>
     )

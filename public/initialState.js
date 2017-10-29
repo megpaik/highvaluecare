@@ -1,10 +1,4 @@
-import * as medicalStudies4 from './data/medicalStudies4';
-
-const studies = alphabetize(clean(medicalStudies4));
-const matches = [];
-const basket = [];
-const scroll = 0;
-const searchString = '';
+var medicalStudies4 = require('./data/medicalStudies4.json');
 
 // Helper 1 - cleans JSON and returns an object with all the studies (entries)
 // Renames all the studies by name_diagnosis
@@ -47,5 +41,11 @@ var alphabetize = function(studies, expected) {
   }
   return studies;
 }
+
+const studies = alphabetize(clean(medicalStudies4));
+const matches = [];
+const basket = [];
+const scroll = 0;
+const searchString = '';
 
 export { studies, matches, basket, scroll, searchString };
