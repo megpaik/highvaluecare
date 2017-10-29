@@ -13,13 +13,18 @@ const search = function (searchString) {
   return {type: 'SEARCH', query: searchString};
 };
 
+// Fired by Search
+const searchView = function (str) {
+  return {type: 'SEARCH_VIEW', query: str}
+};
+
 // Fired by SingleResult
 const choose = function (id) {
   return {type: 'CHOOSE', query: Number(id)};
 };
 
 // Fired by BasketElm
-const delete = function (id) {
+const deleteElm = function (id) {
   return {type: 'DELETE', query: Number(id)};
 };
 
@@ -28,4 +33,4 @@ const clear = function () {
   return {type: 'CLEAR'};
 };
 
-export { clickRight, clickLeft, search, choose, delete, clear };
+export { clickRight, clickLeft, search, searchView, choose, deleteElm, clear };
