@@ -2,20 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { mainReducer as reducers } from './reducers';
-import searchBar from './components/SearchBar';
-import listing from './components/Listing';
-import basket from './components/Basket';
+import SearchBar from './components/SearchBar';
+import Listing from './components/Listing';
+import Basket from './components/Basket';
 import * as initialState from './initialState';
 import * as actions from './actions/index';
 
 const store = createStore(reducers, initialState);
 timer.setStore(store);
 
-const gameOfLife = <GameOfLife store={store}/>;
+let searchPage = (<div> 
+                    <SearchBar store={store}/>
+                    <Listing store={store}/>
+                    <Basket store={store}/>
+                  </div>);
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    gameOfLife,
+    searchPage,
     document.getElementById('container')
   );
 });
