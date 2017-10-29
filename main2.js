@@ -24,7 +24,8 @@ var clean = function (obj) {
       modifiedEntry.lowerDiag = lowerDiag;
       modifiedEntry.ID = uniqueID;
 
-      modifiedEntries[uniqueID] = modifiedEntry;
+      //modifiedEntries[uniqueID] = modifiedEntry;
+      modifiedEntries[prop] = modifiedEntry;
     }
   }
   return modifiedEntries;

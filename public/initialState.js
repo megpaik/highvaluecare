@@ -1,9 +1,51 @@
-// CIS 197 - React HW
+import * as medicalStudies4 from './data/medicalStudies4';
 
-const x = 48;
-const y = 36;
-const cells = Array.apply(null, Array(x * y)).map(() => {
-    return false;
-});
+const studies = alphabetize(clean(medicalStudies4));
+const matches = [];
+const basket = [];
+const scroll = 0;
+const searchString = '';
 
-export { x, y, cells }
+// Helper 1 - cleans JSON and returns an object with all the studies (entries)
+// Renames all the studies by name_diagnosis
+var clean = function (obj) {
+  var modifiedEntries = {};
+
+  for (var prop in obj) {
+    if (obj.hasOwnProperty(prop)) {
+      var modifiedEntry = obj[prop];
+      var lowerName = prop.toLowerCase();
+      var lowerDiag = modifiedEntry['Intended Diagnosis'].toLowerCase();
+      var uniqueID = lowerName + '_' + lowerDiag;
+      modifiedEntry.lowerName = lowerName;
+      modifiedEntry.lowerDiag = lowerDiag;
+      modifiedEntry.ID = uniqueID;
+
+      //modifiedEntries[uniqueID] = modifiedEntry;
+      modifiedEntries[prop] = modifiedEntry;
+    }
+  }
+  return modifiedEntries;
+}
+
+// Helper 2 - alphabetizes properties of studies by removing and adding them
+var alphabetize = function(studies, expected) {
+  var keys = Object.keys(studies).sort(function keyOrder(k1, k2) {
+      if (studies[k1].name.toLowerCase() < studies[k2].name.toLowerCase()) return -1;
+      else if (studies[k1].name.toLowerCase() > studies[k2].name.toLowerCase()) return +1;
+      else return 0;
+  });
+
+  var holder = {};
+  for (var i = 0; i < keys.length; i++) {
+    holder[keys[i]] = studies[keys[i]];
+    delete studies[keys[i]];
+  }
+
+  for (i = 0; i < keys.length; i++) {
+    studies[keys[i]] = holder[keys[i]];
+  }
+  return studies;
+}
+
+export { studies, matches, basket, scroll, searchString };

@@ -9,9 +9,8 @@ import * as initialState from './initialState';
 import * as actions from './actions/index';
 
 const store = createStore(reducers, initialState);
-timer.setStore(store);
 
-let searchPage = (<div> 
+let searchPage = (<div>
                     <SearchBar store={store}/>
                     <Listing store={store}/>
                     <Basket store={store}/>
