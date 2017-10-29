@@ -20,7 +20,7 @@ gulp.task('browserify', function () {
     cache: {}, packageCache: {}, fullPaths: true
   })
   .transform('babelify', {
-    presets: ['es2015', 'react'] 
+    presets: ['es2015', 'react']
   })
   .plugin(resolutions, '*')
     .on('time', function (time) {
