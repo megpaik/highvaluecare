@@ -88,9 +88,10 @@ var writeCosts = function (costedObjs) {
     var counter = 0;
     for (var k in el.Costs) {
       sum += el.Costs[k];
+      el.Costs[k] = Number((el.Costs[k]).toFixed(2));
       counter ++;
     }
-    el.Cost = sum / counter;
+    el.Cost = Number((sum / counter).toFixed(2));
     existingObjs[i] = el;
   }
 

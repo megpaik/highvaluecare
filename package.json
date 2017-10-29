@@ -1,20 +1,60 @@
 {
-  "name": "node-web-scrape",
-  "version": "0.0.1",
-  "description": "Scrape le web.",
-  "main": "main.js",
+  "name": "high-value-care",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
-    "start": "node scraper.js"
+    "start": "nodemon app.js --exec babel-node --presets es2015",
+    "test": "mocha --compilers jsx:babel-register"
   },
   "author": "Megan & Oliver",
-  "dependencies": {
-    "express": "latest",
-    "request": "latest",
-    "cheerio": "latest"
-  },
   "devDependencies": {
+    "babel-preset-react": "*",
+    "babel-register": "^6.23.0",
+    "browserify": "*",
+    "browserify-resolutions": "*",
     "browser-sync": "^2.18.13",
+    "chai": "*",
+    "eslint-plugin-react": "*",
+    "expect": "*",
+    "grunt": "*",
+    "grunt-mocha-test": "*",
+    "grunt-shell": "*",
     "gulp": "^3.9.1",
-    "gulp-connect": "^5.0.0"
+    "gulp-connect": "^5.0.0",
+    "gulp-eslint": "*",
+    "gulp-zip": "*",
+    "jsdom": "*",
+    "mocha": "*",
+    "nodemon": "^1.11.0",
+    "proxyquire": "*",
+    "redux-devtools": "*",
+    "sinon": "*",
+    "vinyl-source-stream": "*",
+    "watchify": "*"
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babelify": "^7.3.0",
+    "cheerio": "latest",
+    "ejs": "*",
+    "eslint": "*",
+    "express": "*",
+    "grunt": "^1.0.1",
+    "grunt-cli": "*",
+    "gruntify-eslint": "*",
+    "gulp-babel": "^6.1.2",
+    "jquery": "*",
+    "lodash": "*",
+    "prop-types": "^15.6.0",
+    "react": "*",
+    "react-addons-test-utils": "*",
+    "react-addons-update": "*",
+    "react-dom": "*",
+    "react-redux": "*",
+    "reactify": "*",
+    "redux": "*",
+    "request": "latest"
   }
 }

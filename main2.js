@@ -76,7 +76,7 @@ var addStudy = function(node, study, items) {
   //handle comments
   if (study.hasOwnProperty('comments')) {
     for (c in study.comments) {
-      $(miniBox).append("<div class='comments'> *  " + c + "</div>");
+      $(miniBox).append("<div class='comments'> *  " + study.comments[c] + "</div>");
     }
   }
 
