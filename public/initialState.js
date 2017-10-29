@@ -1,5 +1,5 @@
-var medicalStudies4 = require('./data/medicalStudies4.json');
-
+// var medicalStudies4 = require('./data/medicalStudies4.json');
+var medicalStudies4 = {};
 // Helper 1 - cleans JSON and returns an object with all the studies (entries)
 // Renames all the studies by name_diagnosis
 var clean = function (obj) {
@@ -46,6 +46,6 @@ const studies = alphabetize(clean(medicalStudies4));
 const matches = [];
 const basket = [];
 const scroll = 0;
-const searchString = '';
+const query = '';
 
-export { studies, matches, basket, scroll, searchString };
+export { studies, matches, basket, scroll, query };

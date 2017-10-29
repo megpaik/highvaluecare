@@ -1,11 +1,19 @@
 import React from 'react';
 import SingleResult from './SingleResult'
 import * as actions from '../actions/index.js';
+import * as initialState from '../initialState';
 
 export default class Cell extends React.Component {
 
     constructor() {
         super();
+        this.state = initialState;
+    }
+
+    componentDidMount() {
+      this.props.store.subscribe(function () {
+        this.setState(this.props.store.getState());
+      }.bind(this));
     }
 
     render() {

@@ -1,11 +1,11 @@
 // Fired by Basket
 const clickRight = function () {
-  return {type: 'ClICK_RIGHT'};
+  return {type: 'CLICK_RIGHT'};
 };
 
-// Fired by Bakset
+// Fired by Basket
 const clickLeft = function () {
-  return {type: 'ClICK_LEFT'};
+  return {type: 'CLICK_LEFT'};
 };
 
 // Fired by Search

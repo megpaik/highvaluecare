@@ -1,12 +1,20 @@
 import React from 'react';
 import * as actions from '../actions/index.js';
+import * as initialState from '../initialState';
 
-export default class Search extends React.Component {
+export default class SearchBar extends React.Component {
 
     constructor() {
         super();
+        this.state = initialState;
         this.onSearchClick = this.onSearchClick.bind(this);
         this.onChange = this.onChange.bind(this);
+    }
+
+    componentDidMount() {
+      this.props.store.subscribe(function () {
+        this.setState(this.props.store.getState());
+      }.bind(this));
     }
 
     onChange(e) {

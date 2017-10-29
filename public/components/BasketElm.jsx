@@ -1,10 +1,12 @@
 import React from 'react';
 import * as actions from '../actions/index.js';
+import * as initialState from '../initialState';
 
 export default class BasketElm extends React.Component {
 
     constructor() {
         super();
+        this.state = initialState;
         this.onDelete = this.onDelete.bind(this);
     }
 
@@ -12,8 +14,14 @@ export default class BasketElm extends React.Component {
         this.props.store.dispatch(actions.deleteElm(this.props.key));
     }
 
+    componentDidMount() {
+      this.props.store.subscribe(function () {
+        this.setState(this.props.store.getState());
+      }.bind(this));
+    }
+
     render() {
-        // this should be the object from medicalStudies 
+        // this should be the object from medicalStudies
         const target = this.state.studies[this.props.key];
         return (
             <div className="fullview">

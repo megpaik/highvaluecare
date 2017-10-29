@@ -9,8 +9,8 @@ export default class ScrollArrows extends React.Component {
   }
 
   onScroll() {
-    const click = this.props.left ? actions.clickLeft : actions.clickRight;
-    this.props.store.dispatch(click);
+    if (this.props.left) this.props.store.dispatch(actions.clickLeft())
+    else this.props.store.dispatch(actions.clickRight());
   }
 
   render() {

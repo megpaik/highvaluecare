@@ -2,12 +2,20 @@ import React from 'react';
 import BasketElm from './BasketElm';
 import ScrollArrows from './ScrollArrows';
 import * as actions from '../actions/index.js';
+import * as initialState from '../initialState';
 
 // THIS IS JUST THE CONTAINER
 export default class Basket extends React.Component {
 
     constructor() {
         super();
+        this.state = initialState;
+    }
+
+    componentDidMount() {
+      this.props.store.subscribe(function () {
+        this.setState(this.props.store.getState());
+      }.bind(this));
     }
 
     render() {

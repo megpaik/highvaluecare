@@ -5,25 +5,27 @@ import * as initialState from '../initialState.js';
 
 const mainReducer = (state, action) => {
   switch (action.type) {
-  case 'ClICK_RIGHT': {
+  case 'CLICK_RIGHT': {
     let scroll = state.scroll;
     scroll = (scroll < state.basket.length - 3) ?
               (scroll + 1) % state.basket.length
               : scroll;
     return _.assign({}, state, {scroll: scroll});
   }
-  case 'ClICK_LEFT': {
+  
+  case 'CLICK_LEFT': {
     let scroll = state.scroll;
     scroll = (scroll > 0) ?
               (state.scroll - 1 + state.basket.length) % state.basket.length
               : scroll;
     return _.assign({}, state, {scroll: scroll});
   }
+
   case 'CLEAR':
     return _.assign({}, state, {basket: [], scroll: 0});
 
   case 'SEARCH':
-    return _.assign({}, state, {matches: returnMatches(query)});
+    return _.assign({}, state, {matches: returnMatches(action.query, state)});
 
   case 'CHOOSE': {
     let basket = state.basket;
@@ -43,16 +45,16 @@ const mainReducer = (state, action) => {
     return _.assign({}, state, {basket: basket, scroll: scroll});
   }
   case 'SEARCH_VIEW':
-    return _.assign({}, state, {searchString: action.query})
+    return _.assign({}, state, {query: action.query})
   }
   return state;
 };
 
 // Helper 1 - Looks for all matching studies
-const returnMatches = function (keyword) {
+const returnMatches = function (keyword, state) {
   let matches = []
-  for (s in studies) {
-    if (searchMatch(keyword, studies[s])) {
+  for (var s in state.studies) {
+    if (searchMatch(keyword, state.studies[s])) {
       matches.push(s);
     }
   }
