@@ -17,17 +17,17 @@ export default class BasketElm extends React.Component {
         const target = this.state.studies[this.props.key];
         return (
             <div className="fullview">
-            <div className="details">
-            <span className="name">{target.name}</span>
-            <span className="cpt">{target.CPT}</span>
-            <span className="diagnosis">{target["Intended Diagnosis"]}</span>
-            <span className="sensitivity">{target.Sensitivity}</span>
-            <span className="specificity">{target.Specificity}</span>
-            <span className="PPV">{target.PPV}</span>
-            <span className="NPV">{target.NPV}</span>
-            <span className="comments">{target.comments}</span>
-            </div>
-            <button className="trash" onClick={this.onDelete}>Trash</button>
+                <div className="details">
+                    <span className="name">{target.name}</span>
+                    <span className="cpt">{target.CPT}</span>
+                    <span className="diagnosis">{target["Intended Diagnosis"]}</span>
+                    <span className="sensitivity">{target.Sensitivity}</span>
+                    <span className="specificity">{target.Specificity}</span>
+                    <span className="PPV">{target.PPV}</span>
+                    <span className="NPV">{target.NPV}</span>
+                    <span className="comments">{target.comments}</span>
+                </div>
+                <button className="trash" onClick={this.onDelete}>Trash</button>
             </div>
         )
     }

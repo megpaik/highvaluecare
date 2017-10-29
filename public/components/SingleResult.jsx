@@ -13,10 +13,10 @@ export default class SingleResult extends React.Component {
     }
 
     render() {
-        const index = this.props.index;
-        const heading = this.state.matches[index].name// but the actual text lol
+        const index = this.props.key;
+        const heading = this.state.studies[index].name;
         return (
-            <div className="item" onClick={onResultClick}>{text}</div>
+            <div className="item" onClick={onResultClick}>{heading}</div>
         );
     }
 }

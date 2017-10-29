@@ -1,14 +1,15 @@
 import React from 'react';
 import * as actions from '../actions/index.js';
 
-export default class scrollArrows extends React.Component {
+export default class ScrollArrows extends React.Component {
 
   constructor() {
     super();
+    this.onScroll = this.onScroll.bind(this);
   }
 
   onScroll() {
-    const direction = this.props.left ? actions.clickLeft : actions.clickRight;
+    const click = this.props.left ? actions.clickLeft : actions.clickRight;
     this.props.store.dispatch(direction);
   }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import BasketElm from './BasketElm';
+import ScrollArrows from './ScrollArrows';
 import * as actions from '../actions/index.js';
 
 // THIS IS JUST THE CONTAINER
@@ -15,9 +16,13 @@ export default class Basket extends React.Component {
         })
         return (
             <div className="basket">
-                <div className="leftcontainer" left={true}></div>
+                <div className="leftcontainer">
+                    <ScrollArrows left={true} store={this.props.store} />
+                </div>
                 <div className="baskettext">{elmarr}</div>
-                <div className="rightcontainer" left={false}></div>
+                <div className="rightcontainer">
+                    <ScrollArrows left={false} store={this.props.store} />
+                </div>
             </div>
         )
     }
