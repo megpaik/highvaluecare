@@ -1,19 +1,11 @@
 import React from 'react';
-import * as actions from '../actions/index.js';
-import * as initialState from '../initialState';
+import { connect } from 'react-redux';
+import { choose } from '../actions/index.js';
 
-export default class SingleResult extends React.Component {
+class SingleResultView extends React.Component {
 
-    constructor() {
-        super();
-        this.state = initialState;
-        this.onClick = this.onClick.bind(this);
-    }
-
-    componentDidMount() {
-      this.props.store.subscribe(function () {
-        this.setState(this.props.store.getState());
-      }.bind(this));
+    constructor(props) {
+        super(props);
     }
 
     onClick() {
@@ -29,3 +21,13 @@ export default class SingleResult extends React.Component {
         );
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onClick: () => { dispatch(choose(key)); }
+    }
+}
+
+const SingleResult = connect(null, mapDispatchToProps)(SingleResultView);
+
+export default SingleResult;

@@ -6,18 +6,11 @@ export default class BasketElm extends React.Component {
 
     constructor() {
         super();
-        this.state = initialState;
         this.onDelete = this.onDelete.bind(this);
     }
 
     onDelete() {
         this.props.store.dispatch(actions.deleteElm(this.props.key));
-    }
-
-    componentDidMount() {
-      this.props.store.subscribe(function () {
-        this.setState(this.props.store.getState());
-      }.bind(this));
     }
 
     render() {

@@ -1,6 +1,3 @@
-// CIS 197 - React HW
-// Author - Devesh Dayal, Steve Vitali, Abhinav Suri
-// Simple Express server to serve static files
 import express from 'express';
 import path from 'path';
 import ejs from 'ejs';
@@ -31,5 +28,5 @@ app.get('/export', (req, res) => {
 
 // Start server
 app.listen(app.get('port'), () => {
-  console.log(`Express game server listening on port ${port}`);
+  console.log(`Express server listening on port ${port}`);
 });

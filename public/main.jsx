@@ -1,24 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import { mainReducer as reducers } from './reducers';
-import SearchBar from './components/SearchBar';
-import SearchResults from './components/SearchResults';
-import Basket from './components/Basket';
+import Root from './components/Root';
 import * as initialState from './initialState';
-import * as actions from './actions/index';
 
 const store = createStore(reducers, initialState);
 
-let searchPage = (<div>
-                    <SearchBar store={store}/>
-                    <SearchResults store={store}/>
-                    <Basket store={store}/>
-                  </div>);
-
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    searchPage,
+    <Provider store={store}>
+      <Root />
+    </Provider>,
     document.getElementById('container')
   );
 });

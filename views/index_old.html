@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>highvalue.care</title>
+  <!-- Style Sheet -->
+  <link href ='../public/styles/style.css' type = "text/css" rel = 'stylesheet' />
+</head>
+
+<body>
+  <!-- This is the container for the main page -->
+  <div id="container" class="main active">
+    <div id="header">highvalue.care</div>
+    <div id="searchcontainer">
+      <input type="text" id="searchbar" placeholder="Search for a study..."></input>
+      <img src="../public/images/search.png" id="submit">
+    </div>
+    <div id="seelist">Or click here for a list of studies</div>
+  </div>
+
+  <!-- This is the directory -->
+  <div id="directory" class="main">
+    <img src="backward.png" id="back1">
+    <div id="directheading">Directory</div>
+    <div id="toplist"></div>
+  </div>
+
+  <!-- This is the filtered page -->
+  <div id="results" class="main">
+    <img src="backward.png" id="back2">
+    <div id="resulthead"></div>
+    <div id="resultlist"></div>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="jquery-3.2.1.js"></script>
+  <script src='./build/main.js'></script>
+</body>
+
+</html>

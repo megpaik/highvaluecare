@@ -33,4 +33,20 @@ const clear = function () {
   return {type: 'CLEAR'};
 };
 
-export { clickRight, clickLeft, search, searchView, choose, deleteElm, clear };
+// Fired by LandingPage
+const navDirectory = function () {
+  return {type: 'NAV_DIRECTORY'};
+};
+
+const navLanding = () => {
+  return {type: 'NAV_LANDING'};
+}
+
+const navCompare = () => {
+  return {type: 'NAV_COMPARE'};
+}
+
+const navSearch = () => {
+  return {type: 'NAV_SEARCH'};
+}
+export { clickRight, clickLeft, search, searchView, choose, deleteElm, clear, navDirectory, navLanding, navCompare, navSearch };

@@ -1,37 +1,36 @@
 import React from 'react';
-import * as actions from '../actions/index.js';
-import * as initialState from '../initialState';
+import { connect } from 'react-redux';
+import { search, searchView } from '../actions/index.js';
 
-export default class SearchBar extends React.Component {
+class SearchBarView extends React.Component {
 
-    constructor() {
-        super();
-        this.state = initialState;
-        this.onSearchClick = this.onSearchClick.bind(this);
-        this.onChange = this.onChange.bind(this);
-    }
-
-    componentDidMount() {
-      this.props.store.subscribe(function () {
-        this.setState(this.props.store.getState());
-      }.bind(this));
-    }
-
-    onChange(e) {
-        this.props.store.dispatch(actions.searchView(e.target.value));
-    }
-
-    onSearchClick() {
-        this.props.store.dispatch(actions.search(this.state.query));
+    constructor(props) {
+        super(props);
     }
 
     render() {
-        const query = this.state.query;
         return (
-            <div>
-                <input className="searchtop" value={query} onChange={this.onChange}></input>
-                <button className="newsearch" onClick={this.onSearchClick}>Submit</button>
+            <div id="searchcontainer">
+                <input id="mainsearch" className="searchbar" placeholder="Search for a study..." value={this.props.query} onChange={this.props.onChange}></input>
+                <button id="submit" onClick={this.props.onSearchClick}></button>
             </div>);
     }
 
 }
+
+const mapStateToProps = (state) => {
+    return {
+        query: state.query
+    }
+};
+
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        onChange: (e) => { dispatch(searchView(e.target.value)); },
+        onSearchClick: () => { dispatch(search(ownProps.query)); }
+    }
+}
+
+const SearchBar = connect(mapStateToProps, mapDispatchToProps)(SearchBarView);
+
+export default SearchBar;

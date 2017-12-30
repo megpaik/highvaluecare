@@ -1,26 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import SingleResult from './SingleResult'
-import * as actions from '../actions/index.js';
-import * as initialState from '../initialState';
 
-export default class Cell extends React.Component {
+class SearchResultsView extends React.Component {
 
-    constructor() {
-        super();
-        this.state = initialState;
-    }
-
-    componentDidMount() {
-      this.props.store.subscribe(function () {
-        this.setState(this.props.store.getState());
-      }.bind(this));
+    constructor(props) {
+        super(props);
     }
 
     render() {
-        const arr = this.state.matches.map((elt, i) => {
-            return <span className='item holder' key={i}>
-            <SingleResult index={i} key={elt} store = {this.props.store}/>
-            </span>;
+        const arr = this.props.matches.map((elt, i) => {
+            return (<span className='searchitem'>
+                        <SingleResult data={elt} />
+                    </span>);
         })
 
         return (
@@ -28,3 +20,13 @@ export default class Cell extends React.Component {
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        matches: this.matches
+    }
+}
+
+const SearchResults = connect(mapStateToProps)(SearchResultsView);
+
+export default SearchResults;

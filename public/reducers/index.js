@@ -1,5 +1,3 @@
-// CIS 197 - React HW
-
 import _ from 'lodash';
 import * as initialState from '../initialState.js';
 
@@ -25,13 +23,14 @@ const mainReducer = (state, action) => {
     return _.assign({}, state, {basket: [], scroll: 0});
 
   case 'SEARCH':
-    return _.assign({}, state, {matches: returnMatches(action.query, state)});
+    return _.assign({}, state, {matches: returnMatches(action.query, state), active: 'SEARCH'});
 
   case 'CHOOSE': {
     let basket = state.basket;
     basket.unshift(action.query);
     return _.assign({}, state, {basket: basket});
   }
+
   case 'DELETE': {
     let basket = state.basket;
     let idx = basket.indexOf(action.query);
@@ -44,9 +43,23 @@ const mainReducer = (state, action) => {
     }
     return _.assign({}, state, {basket: basket, scroll: scroll});
   }
+
   case 'SEARCH_VIEW':
     return _.assign({}, state, {query: action.query})
+
+  case 'NAV_DIRECTORY':
+    return _.assign({}, state, {active: 'DIRECTORY'});
+
+  case 'NAV_LANDING':
+    return _.assign({}, state, {active: 'LANDING'});
+  
+  case 'NAV_COMPARE':
+    return _.assign({}, state, {active: 'COMPARE'});
+  
+  case 'NAV_SEARCH':
+    return _.assign({}, state, {active: 'SEARCH'});
   }
+
   return state;
 };
 
