@@ -12,7 +12,7 @@ class SearchBarView extends React.Component {
         return (
             <div id="searchcontainer">
                 <input id="mainsearch" className="searchbar" placeholder="Search for a study..." value={this.props.query} onChange={this.props.onChange}></input>
-                <button id="submit" onClick={this.props.onSearchClick}></button>
+                <button id="submit" onClick={() => this.props.onSearchClick(this.props.query)}></button>
             </div>);
     }
 
@@ -27,7 +27,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onChange: (e) => { dispatch(searchView(e.target.value)); },
-        onSearchClick: () => { dispatch(search(ownProps.query)); }
+        onSearchClick: (q) => { dispatch(search(q)); }
     }
 }
 

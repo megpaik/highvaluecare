@@ -1,12 +1,11 @@
 import React from 'react';
-import * as actions from '../actions/index.js';
-import * as initialState from '../initialState';
+import { connect } from 'react-redux';
+import { deleteElm } from '../actions/index.js';
 
-export default class BasketElm extends React.Component {
+class BasketElmView extends React.Component {
 
     constructor() {
         super();
-        this.onDelete = this.onDelete.bind(this);
     }
 
     onDelete() {
@@ -33,3 +32,13 @@ export default class BasketElm extends React.Component {
         )
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onDelete: () => { dispatch(deleteElm()); }
+    }
+}
+
+const BasketElm = connect(mapDispatchToProps)(BasketElmView);
+
+export default BasketElm;

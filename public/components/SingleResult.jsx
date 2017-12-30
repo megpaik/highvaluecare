@@ -8,23 +8,18 @@ class SingleResultView extends React.Component {
         super(props);
     }
 
-    onClick() {
-        this.props.store.dispatch(actions.choose(this.props.key));
-    }
-
     render() {
-        const index = this.props.key;
-        const study = this.state.studies[index];
-        const heading = study.name;
         return (
-            <div className="item" onClick={this.onResultClick}>{heading}</div>
+            <div className="item" onClick={this.props.onClick}>
+                {this.props.data.name}
+            </div>
         );
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onClick: () => { dispatch(choose(key)); }
+        onClick: () => { dispatch(choose(Object.keys(ownProps.data)[0])); }
     }
 }
 

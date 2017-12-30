@@ -68,7 +68,7 @@ const returnMatches = function (keyword, state) {
   let matches = []
   for (var s in state.studies) {
     if (searchMatch(keyword, state.studies[s])) {
-      matches.push(s);
+      matches.push(state.studies[s]);
     }
   }
   return matches;

@@ -10,8 +10,8 @@ class SearchResultsView extends React.Component {
 
     render() {
         const arr = this.props.matches.map((elt, i) => {
-            return (<span className='searchitem'>
-                        <SingleResult data={elt} />
+            return (<span className='searchitem' key={i}>
+                        <SingleResult data={elt}/>
                     </span>);
         })
 
@@ -23,7 +23,7 @@ class SearchResultsView extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        matches: this.matches
+        matches: state.matches
     }
 }
 

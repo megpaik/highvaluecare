@@ -16,19 +16,13 @@ class SearchPageView extends React.Component {
         <button onClick={this.props.onClick}>Back</button>
         <SearchBar />
         <SearchResults />
-        <button onCompare={this.props.onCompare}>Compare Selected Studies</button>
+        <button onClick={this.props.onCompare}>Compare Selected Studies</button>
       </div>
     )
   }
 }
 
-// mapStateToProps = (state) => {
-//   return {
-//     matches: state.matches
-//   }
-// }
-
-mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     onClick: () => { dispatch(navLanding()); },
     onCompare: () => { dispatch(navCompare()); }
@@ -36,4 +30,5 @@ mapDispatchToProps = (dispatch) => {
 }
 
 const SearchPage = connect(null, mapDispatchToProps)(SearchPageView);
+
 export default SearchPage;
