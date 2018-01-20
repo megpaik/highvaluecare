@@ -19,7 +19,7 @@ class SingleResultView extends React.Component {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onClick: () => { dispatch(choose(Object.keys(ownProps.data)[0])); }
+        onClick: () => { console.log(ownProps.data); dispatch(choose(Object.keys(ownProps.data)[0])); }
     }
 }
 

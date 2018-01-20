@@ -4,20 +4,17 @@ import { deleteElm } from '../actions/index.js';
 
 class BasketElmView extends React.Component {
 
-    constructor() {
-        super();
-    }
-
-    onDelete() {
-        this.props.store.dispatch(actions.deleteElm(this.props.key));
+    constructor(props) {
+        super(props);
     }
 
     render() {
-        // this should be the object from medicalStudies
-        const target = this.state.studies[this.props.key];
+        const target = this.props.data;
+        console.log(target);
         return (
             <div className="fullview">
                 <div className="details">
+                Testing
                     <span className="name">{target.name}</span>
                     <span className="cpt">{target.CPT}</span>
                     <span className="diagnosis">{target["Intended Diagnosis"]}</span>
@@ -27,18 +24,18 @@ class BasketElmView extends React.Component {
                     <span className="NPV">{target.NPV}</span>
                     <span className="comments">{target.comments}</span>
                 </div>
-                <button className="trash" onClick={this.onDelete}>Trash</button>
+                <button className="trash" onClick={this.props.onDelete}>Trash</button>
             </div>
         )
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onDelete: () => { dispatch(deleteElm()); }
+        onDelete: () => { dispatch(deleteElm(Object.keys(ownProps.data)[0])); }
     }
 }
 
-const BasketElm = connect(mapDispatchToProps)(BasketElmView);
+const BasketElm = connect(null, mapDispatchToProps)(BasketElmView);
 
 export default BasketElm;
